@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>服务器数据-服务器</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../dist/css/ionicons.min.css">
+    <!-- Select2 -->
+  <link rel="stylesheet" href="../plugins/select2/select2.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.css">
+     <link rel="stylesheet" href="../dist/css/common.css">
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="../plugins/iCheck/flat/blue.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="../plugins/morris/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="../plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="../plugins/datepicker/datepicker3.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker-bs3.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">日志系统</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+     <ul class="nav navbar-nav log-menu">
+            <li class="active">
+              <a href="../index.html" target="_self">
+                <button class="btn btn-block btn-success btn-flat" id="nav_application">
+                  <i class="fa fa-signal"></i>应用
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Mobile/mobile.html">
+                <button class="btn btn-block btn-flat btn-twitter" id="nav_mobile">
+                  <i class="menu-icon glyphicon glyphicon-phone"></i>移动
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Browser/browser.html">
+                <button class="btn btn-block btn-flat btn-warning" id="nav_browser">
+                  <i class="fa fa-users"></i>浏览器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="servers.html">
+                <button class="btn btn-block btn-flat bg-purple" id="nav_server">
+                  <i class="fa fa-cogs"></i>服务器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../configs/configs.html">
+                <button class="btn btn-block btn-flat bg-navy" id="nav_config">
+                  <i class="fa fa-fw fa-adjust"></i>配置
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Documents/documents.html">
+                <button class="btn btn-block btn-flat bg-aqua" id="nav_document">
+                  <i class="fa fa-fw fa-database"></i>文档
+                </button>
+              </a>
+            </li>
+          </ul>
+      <div class="pull-right">
+        <a class="log-exit"><i class="fa fa-sign-out"></i></a>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>亚历山大·皮尔斯</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">主导航</li>
+         <li class="active treeview">
+          <a href="search.html">
+            <i class="fa fa-dashboard"></i> <span>服务器</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> 指标查看</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> 指标聚合</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> 系统大盘</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> 系统指标</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="real-time-protection.html">
+            <i class="fa fa-cogs"></i>
+            <span>设置</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> Screen配置</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> 指标模板配置</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> influxDB配置</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        日志搜索
+        <small>Search</small>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">共 336 个事件</h3>
+            </div>
+            <div class="box-body chart-responsive">
+              <div class="chart" id="bar-chart" style="height: 300px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box box-danger search clearfix">
+          <div class="col-sm-2">
+            <select class="form-control select2 form-group" style="width: 100%;">
+              <option selected="selected">数据</option>
+              <option>1数据</option>
+              <option disabled="disabled">2数据</option>
+              <option>4数据</option>
+              <option>3数据</option>
+              <option>5数据</option>
+              <option>6数据n</option>
+            </select>
+          </div>
+          <div class="col-sm-3">
+            <div id="reportrange" class="btn month">
+              <i class="fa fa-calendar"></i>
+              &nbsp;<span>
+              </span>
+                <b class="fa fa-angle-down"></b>
+              </div>
+          </div>
+          <div class="col-sm-5">
+            <input type="text" class="form-control form-group" placeholder="">
+          </div>
+          <div class="col-sm-2">
+            <input type="button" class="btn btn-block btn-danger" value="查询" />
+          </div>
+      </div>
+     <div class="box search clearfix">
+       <div class="row">
+          <div class="col-sm-4">
+            <select class="form-control select2 form-group" style="width: 100%;">
+              <option selected="selected">数据</option>
+              <option>1数据</option>
+              <option disabled="disabled">2数据</option>
+              <option>4数据</option>
+              <option>3数据</option>
+              <option>5数据</option>
+              <option>6数据n</option>
+            </select>
+            <div class="box box-success box-solid del-box">
+              <div class="box-header with-border">
+                <h3 class="box-title">字段3</h3>
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                </div>
+                <!-- /.box-tools -->
+              </div>
+            </div>
+            <div class="box box-success box-solid del-box">
+              <div class="box-header with-border">
+                <h3 class="box-title">字段3</h3>
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                </div>
+                <!-- /.box-tools -->
+              </div>
+            </div>
+            <div class="box box-success box-solid del-box">
+              <div class="box-header with-border">
+                <h3 class="box-title">字段3</h3>
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                </div>
+                <!-- /.box-tools -->
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="box box-danger">
+            <div class="box-header">
+              <h3 class="box-title">事件</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive">
+            <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>timestamp</th>
+                  <th>日志</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr id="fieldInfo" onclick="showInfoTable(this)">
+                  <td>2016-05-26T08:40:16.866Z</td>
+                  <td>
+                    <div style="height: 70px; max-width: 700px; overflow: hidden;">
+                      <span id="fd_@version" class="fdAll"><b>@version：</b>1</span>
+                              
+                            
+                              
+                                <span id="fd_beat" class="fdAll"><b>beat：</b>{"hostname":"localhost.localdomain","name":"localhost.localdomain"}</span>
+                              
+                            
+                              
+                                <span id="fd_body_bytes_sent" class="fdAll"><b>body_bytes_sent：</b>2129</span>
+                              
+                            
+                              
+                                <span id="fd_content_length" class="fdAll"><b>content_length：</b>549</span>
+                              
+                            
+                              
+                                <span id="fd_count" class="fdAll"><b>count：</b>1</span>
+                              
+                            
+                              
+                                <span id="fd_fields" class="fdAll"><b>fields：</b>null</span>
+                              
+                            
+                              
+                                <span id="fd_host" class="fdAll"><b>host：</b>localhost.localdomain</span>
+                              
+
+                    </div>
+                  </td>                 
+                </tr>
+                <tr id="showInfo">
+                  <td colspan="2" style="padding: 0 0; margin: 0 0;">
+                    <table class="table table-bordered table-hover"
+                            style="padding: 0 0; margin: 0 0;">
+                              <tr>
+                                <td>@timestamp</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">2016-06-22T01:51:50.000Z</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>@version</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">1</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>beat</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">{"hostname":"localhost.localdomain","name":"localhost.localdomain"}</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>body_bytes_sent</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">2129</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>content_length</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">549</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>count</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">1</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>fields</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">null</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>host</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">localhost.localdomain</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>hostname</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">10.201.129.98:8080, 10.201.128.56:8080, 10.201.129.99:8080, 10.201.128.54:8080, 10.201.128.55:8080</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>http_cookie</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">10.201.128.190</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>http_referer</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">-</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>http_user_agent</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">Apache-HttpClient/4.3.1 (java 1.5)</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>http_x_forwarded_for</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">-</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>input_type</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">log</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>message</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">- | 22/Jun/2016:09:51:50 +0800 | POST /xdcloudsearch/api/goodSearch/searchProductByIds.do HTTP/1.1 | 200 | 2129 | {\x22requestData\x22:\x22{\x5C\x22channel\x5C\x22:\x5C\x221\x5C\x22,\x5C\x22extField\x5C\x22:\x5C\x22goodsId,comGoodsCode,goodsSalesName,goodsType,goodsDesc,pic_10002,goodsImgPath,supplierSid,packCode,comSid,brandSid,mdmCategorySid,mdmCategorySid,proStan,color,subStan,weight,sType,cnName,taxRate,logisticsType,if7Refund,infoMarchantName,infoMarchantSid,infoStoreSid,infoStoreName,marketPrice,shopId,merchantId,placeOfOrgin,saleUnit,customCategory,yunType,ifPickup,ifCOD,categoryBackIds,productSid,goodsAttr\x5C\x22,\x5C\x22isFilterCommons\x5C\x22:false,\x5C\x22pageNo\x5C\x22:\x5C\x221\x5C\x22,\x5C\x22pageSize\x5C\x22:\x5C\x221\x5C\x22,\x5C\x22productIds\x5C\x22:\x5C\x22342581\x5C\x22}\x22} | 549 | - | Apache-HttpClient/4.3.1 (java 1.5) | - | 10.201.128.190 | localhost.localdomain | 10.201.129.98:8080, 10.201.128.56:8080, 10.201.129.99:8080, 10.201.128.54:8080, 10.201.128.55:8080 | 0.000, 0.000, 0.000, 0.000, 0.133 | 0.134</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>method</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">POST</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>nuid</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">-</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>offset</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">562157442</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>remote_addr</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">localhost.localdomain</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>request</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">POST /xdcloudsearch/api/goodSearch/searchProductByIds.do HTTP/1.1</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>request_body</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">{\x22requestData\x22:\x22{\x5C\x22channel\x5C\x22:\x5C\x221\x5C\x22,\x5C\x22extField\x5C\x22:\x5C\x22goodsId,comGoodsCode,goodsSalesName,goodsType,goodsDesc,pic_10002,goodsImgPath,supplierSid,packCode,comSid,brandSid,mdmCategorySid,mdmCategorySid,proStan,color,subStan,weight,sType,cnName,taxRate,logisticsType,if7Refund,infoMarchantName,infoMarchantSid,infoStoreSid,infoStoreName,marketPrice,shopId,merchantId,placeOfOrgin,saleUnit,customCategory,yunType,ifPickup,ifCOD,categoryBackIds,productSid,goodsAttr\x5C\x22,\x5C\x22isFilterCommons\x5C\x22:false,\x5C\x22pageNo\x5C\x22:\x5C\x221\x5C\x22,\x5C\x22pageSize\x5C\x22:\x5C\x221\x5C\x22,\x5C\x22productIds\x5C\x22:\x5C\x22342581\x5C\x22}\x22}</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>request_time</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">null</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>source</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">/usr/local/nginx/logs/localhost.log</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>status</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">200</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>tags</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">["beats_input_codec_plain_applied"]</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>time_local</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">22/Jun/2016:09:51:50 +0800</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>type</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">search-nginx-log</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>upstream_addr</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">0.000, 0.000, 0.000, 0.000, 0.133</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>upstream_response_time</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">0.134</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>uri</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">/xdcloudsearch/api/goodSearch/searchProductByIds.do</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>url_args</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">null</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>url_path</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">/xdcloudsearch/api/goodSearch/searchProductByIds.do</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>verb</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">HTTP/1.1</div></td>
+                              </tr>
+                            
+                          </table>
+                  </td>
+                  <td></td>
+
+                 
+                </tr>
+                <tr>
+                  <td>2016-05-27T08:40:16.866Z</td>
+                  <td>I@version:1 level:INFO method:getCalcComment msg:queryCommentCount info ===>>{"memberId":"100000000005963"} project:iokblGoodsCommentApi tags:["_jsonparsefailure"] time:2016-05-26 16:40:16 016
+                  </td>
+                  
+                </tr>
+                <tr>
+                  <td>2016-05-27T08:40:16.866Z</td>
+                  <td>I@version:1 level:INFO method:getCalcComment msg:queryCommentCount info ===>>{"memberId":"100000000005963"} project:iokblGoodsCommentApi tags:["_jsonparsefailure"] time:2016-05-26 16:40:16 016
+                  </td>
+                </tr>
+                <tr>
+                  <td>2016-05-27T08:40:16.866Z</td>
+                  <td>I@version:1 level:INFO method:getCalcComment msg:queryCommentCount info ===>>{"memberId":"100000000005963"} project:iokblGoodsCommentApi tags:["_jsonparsefailure"] time:2016-05-26 16:40:16 016</td>                
+                </tr>
+                <tr>
+                  <td>T2016-05-27T08:40:16.866Z</td>
+                  <td>A@version:1 level:INFO method:getCalcComment msg:queryCommentCount info ===>>{"memberId":"100000000005963"} project:iokblGoodsCommentApi tags:["_jsonparsefailure"] time:2016-05-26 16:40:16 016)</td>
+                </tr>
+                <tr>
+                  <td>2016-05-27T08:40:16.866Z</td>
+                  <td>F@version:1 level:INFO method:getCalcComment msg:queryCommentCount info ===>>{"memberId":"100000000005963"} project:iokblGoodsCommentApi tags:["_jsonparsefailure"] time:2016-05-26 16:40:16 016</td>
+               </tr>
+                <tr>
+                  <td>2016-05-27T08:40:16.866ZL</td>
+                  <td>Ko@version:1 level:INFO method:getCalcComment msg:queryCommentCount info ===>>{"memberId":"100000000005963"} project:iokblGoodsCommentApi tags:["_jsonparsefailure"] time:2016-05-26 16:40:16 016</td>
+                 </tr>
+                  <tr>
+                  <td>2016-05-27T08:40:16.866ZL</td>
+                  <td>Ko@version:1 level:INFO method:getCalcComment msg:queryCommentCount info ===>>{"memberId":"100000000005963"} project:iokblGoodsCommentApi tags:["_jsonparsefailure"] time:2016-05-26 16:40:16 016</td>
+                 </tr>
+                  <tr>
+                  <td>2016-05-27T08:40:16.866ZL</td>
+                  <td>Ko@version:1 level:INFO method:getCalcComment msg:queryCommentCount info ===>>{"memberId":"100000000005963"} project:iokblGoodsCommentApi tags:["_jsonparsefailure"] time:2016-05-26 16:40:16 016</td>
+                 </tr>
+                  <tr>
+                  <td>2016-05-27T08:40:16.866ZL</td>
+                  <td>Ko@version:1 level:INFO method:getCalcComment msg:queryCommentCount info ===>>{"memberId":"100000000005963"} project:iokblGoodsCommentApi tags:["_jsonparsefailure"] time:2016-05-26 16:40:16 016</td>
+                 </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          </div>
+        </div>
+     </div>
+    </section>
+  </div>
+ 
+</div>
+<!-- ./wrapper -->
+
+<script src="../plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../plugins/select2/select2.full.min.js"></script>
+<script src="../dist/js/moment.min.js"></script>
+<script type="text/javascript" src="../dist/js/daterangepicker.js"></script>
+<!-- Morris.js charts -->
+<script src="../dist/js/raphael-min.js"></script>
+<script src="../plugins/morris/morris.min.js"></script>
+<!-- DataTables -->
+<script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+ <script>
+ $("[id='showInfo']").hide();
+    function showInfoTable(obj) {
+      $("[id='showInfo']").each(function(i) {
+        $("[id='showInfo']").eq(i).hide(1000);
+      });
+      if ($(obj).next().css("display") == ""
+          || $(obj).next().css("display") == "table-row") {
+        $(obj).next().hide(1000);
+      } else {
+        $(obj).next().show(1000);
+      }
+    }
+
+ $(function () {
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": false,
+      "info": true,
+      "autoWidth": false
+    });
+    $(".select2").select2();
+  });
+    var ComponentsPickers = function () {
+     var handleDateRangePickers = function () {
+        if (!jQuery().daterangepicker) {
+            return;
+        }
+     $('#reportrange').daterangepicker({
+                startDate: moment().subtract('days', 29),
+                endDate: moment(),
+                minDate: '01/01/2012',
+                /*maxDate: '12/31/2018',*/
+                showDropdowns: true,
+                showWeekNumbers: true,
+                timePicker: false,
+                timePickerIncrement: 1,
+                timePicker12Hour: true,
+                ranges: {
+                    /*'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                    'Last 7 Days': [moment().subtract('days', 6), moment()],
+                    'Last 30 Days': [moment().subtract('days', 29), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]*/
+                },
+                buttonClasses: ['btn'],
+                applyClass: 'green',
+                cancelClass: 'default',
+                format: 'MM/DD/YYYY',
+                separator: ' to ',
+                locale: {
+                    daysOfWeek: ['\u65e5', '\u4e00', '\u4e8c', '\u4e09', '\u56db', '\u4e94', '\u516d'],
+                    monthNames: ['\u4e00\u6708', '\u4e8c\u6708', '\u4e09\u6708', '\u56db\u6708', '\u4e94\u6708', '\u516d\u6708', '\u4e03\u6708', '\u516b\u6708', '\u4e5d\u6708', '\u5341\u6708', '\u5341\u4e00\u6708', '\u5341\u4e8c\u6708'],
+                    firstDay: 1
+                }
+            },
+            function (start, end) {
+                $('#reportrange span').html(start.format('YYYY/MMMM/D') + ' - ' + end.format('YYYY/MMMM/D'));
+            }
+        );
+        //Set the initial state of the picker label
+        $('#reportrange span').html(moment().subtract('days', 29).format('YYYY/MMMM/D') + ' - ' + moment().format('YYYY/MMMM/D'));
+             
+    }
+        return {
+        //main function to initiate the module
+        init: function () {
+
+            handleDateRangePickers();
+        }
+    };
+    }();
+           jQuery(document).ready(function() {       
+           // initiate layout and plugins
+           ComponentsPickers.init();
+           
+        });   
+</script>
+<script>
+  $(function () {
+    "use strict";    
+    //BAR CHART
+    var bar = new Morris.Bar({
+      element: 'bar-chart',
+      resize: true,
+      data: [
+        {y: '13:00', a: 100},
+        {y: '14:00', a: 2000},
+        {y: '15:00', a: 1900},
+        {y: '16:00', a: 1800},
+        {y: '17:00', a: 1200},
+        {y: '18:00', a: 900},
+        {y: '19:00', a: 800},
+        {y: '20:00', a: 700},
+        {y: '21:00', a: 600},
+        {y: '22:00', a: 500},
+        {y: '23:00', a: 400},
+        {y: '24:00', a: 470},
+        {y: '00:00', a: 150},
+        {y: '01:00', a: 175},
+        {y: '02:00', a: 150},
+        {y: '03:00', a: 275},
+        {y: '04:00', a: 100},
+        {y: '05:00', a: 220},
+        {y: '06:00', a: 100},
+        {y: '07:00', a: 300},
+        {y: '08:00', a: 150},
+        {y: '09:00', a: 160},
+        {y: '10:00', a: 170},
+        {y: '11:00', a: 180},
+        {y: '12:00', a: 190}
+      ],
+      barColors: ['#006e8a'],
+      xkey: 'y',
+      ykeys: ['a'],
+      labels: ['CPU'],
+      hideHover: 'auto'
+    });
+  });
+</script>
+</body>
+</html>

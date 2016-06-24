@@ -1,0 +1,13 @@
+@charset "UTF-8";
+.table-prompt{line-height: 35px;}
+.realtime{padding:30px;}
+tr.realtime-console{color:#d73925;}
+.realtime-table{margin-top:30px;}
+.search{padding:30px 30px 10px 30px;}
+.box.box-solid.del-box{border:none;}
+.table-responsive{overflow-x:hidden;}
+@media screen and (max-width:767px) {
+	.table-responsive {
+		overflow-x:auto;
+	}
+}
