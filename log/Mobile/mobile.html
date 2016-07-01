@@ -521,11 +521,218 @@
 
                  
                 </tr>
-                <tr>
+                <tr id="fieldInfo" onclick="showInfoTable(this)">
                   <td>2016-05-27T08:40:16.866Z</td>
                   <td>I@version:1 level:INFO method:getCalcComment msg:queryCommentCount info ===>>{"memberId":"100000000005963"} project:iokblGoodsCommentApi tags:["_jsonparsefailure"] time:2016-05-26 16:40:16 016
                   </td>
-                  
+                </tr>
+                <tr id="showInfo">
+                  <td colspan="2" style="padding: 0 0; margin: 0 0;">
+                    <table class="table table-bordered table-hover"
+                            style="padding: 0 0; margin: 0 0;">
+                              <tr>
+                                <td>@timestamp</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">2016-06-22T01:51:50.000Z</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>@version</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">1</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>beat</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">{"hostname":"localhost.localdomain","name":"localhost.localdomain"}</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>body_bytes_sent</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">2129</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>content_length</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">549</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>count</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">1</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>fields</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">null</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>host</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">localhost.localdomain</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>hostname</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">10.201.129.98:8080, 10.201.128.56:8080, 10.201.129.99:8080, 10.201.128.54:8080, 10.201.128.55:8080</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>http_cookie</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">10.201.128.190</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>http_referer</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">-</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>http_user_agent</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">Apache-HttpClient/4.3.1 (java 1.5)</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>http_x_forwarded_for</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">-</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>input_type</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">log</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>message</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">- | 22/Jun/2016:09:51:50 +0800 | POST /xdcloudsearch/api/goodSearch/searchProductByIds.do HTTP/1.1 | 200 | 2129 | {\x22requestData\x22:\x22{\x5C\x22channel\x5C\x22:\x5C\x221\x5C\x22,\x5C\x22extField\x5C\x22:\x5C\x22goodsId,comGoodsCode,goodsSalesName,goodsType,goodsDesc,pic_10002,goodsImgPath,supplierSid,packCode,comSid,brandSid,mdmCategorySid,mdmCategorySid,proStan,color,subStan,weight,sType,cnName,taxRate,logisticsType,if7Refund,infoMarchantName,infoMarchantSid,infoStoreSid,infoStoreName,marketPrice,shopId,merchantId,placeOfOrgin,saleUnit,customCategory,yunType,ifPickup,ifCOD,categoryBackIds,productSid,goodsAttr\x5C\x22,\x5C\x22isFilterCommons\x5C\x22:false,\x5C\x22pageNo\x5C\x22:\x5C\x221\x5C\x22,\x5C\x22pageSize\x5C\x22:\x5C\x221\x5C\x22,\x5C\x22productIds\x5C\x22:\x5C\x22342581\x5C\x22}\x22} | 549 | - | Apache-HttpClient/4.3.1 (java 1.5) | - | 10.201.128.190 | localhost.localdomain | 10.201.129.98:8080, 10.201.128.56:8080, 10.201.129.99:8080, 10.201.128.54:8080, 10.201.128.55:8080 | 0.000, 0.000, 0.000, 0.000, 0.133 | 0.134</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>method</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">POST</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>nuid</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">-</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>offset</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">562157442</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>remote_addr</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">localhost.localdomain</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>request</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">POST /xdcloudsearch/api/goodSearch/searchProductByIds.do HTTP/1.1</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>request_body</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">{\x22requestData\x22:\x22{\x5C\x22channel\x5C\x22:\x5C\x221\x5C\x22,\x5C\x22extField\x5C\x22:\x5C\x22goodsId,comGoodsCode,goodsSalesName,goodsType,goodsDesc,pic_10002,goodsImgPath,supplierSid,packCode,comSid,brandSid,mdmCategorySid,mdmCategorySid,proStan,color,subStan,weight,sType,cnName,taxRate,logisticsType,if7Refund,infoMarchantName,infoMarchantSid,infoStoreSid,infoStoreName,marketPrice,shopId,merchantId,placeOfOrgin,saleUnit,customCategory,yunType,ifPickup,ifCOD,categoryBackIds,productSid,goodsAttr\x5C\x22,\x5C\x22isFilterCommons\x5C\x22:false,\x5C\x22pageNo\x5C\x22:\x5C\x221\x5C\x22,\x5C\x22pageSize\x5C\x22:\x5C\x221\x5C\x22,\x5C\x22productIds\x5C\x22:\x5C\x22342581\x5C\x22}\x22}</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>request_time</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">null</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>source</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">/usr/local/nginx/logs/localhost.log</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>status</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">200</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>tags</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">["beats_input_codec_plain_applied"]</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>time_local</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">22/Jun/2016:09:51:50 +0800</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>type</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">search-nginx-log</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>upstream_addr</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">0.000, 0.000, 0.000, 0.000, 0.133</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>upstream_response_time</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">0.134</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>uri</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">/xdcloudsearch/api/goodSearch/searchProductByIds.do</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>url_args</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">null</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>url_path</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">/xdcloudsearch/api/goodSearch/searchProductByIds.do</div></td>
+                              </tr>
+                            
+                              <tr>
+                                <td>verb</td>
+                                <td><div
+                                    style="max-width: 700px; overflow: hidden;">HTTP/1.1</div></td>
+                              </tr>
+                            
+                          </table>
+                  </td>
+                  <td></td>
+
+                 
                 </tr>
                 <tr>
                   <td>2016-05-27T08:40:16.866Z</td>

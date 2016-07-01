@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>仪表大盘--应用</title>
+  <title>系统指标--缓存--应用</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="dist/css/AdminLTE.css">
      <link rel="stylesheet" href="dist/css/common.css">
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+      <!-- Select2 -->
+  <link rel="stylesheet" href="plugins/select2/select2.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
   <!-- Morris chart -->
@@ -43,9 +45,9 @@
     <!-- Logo -->
     <a href="index.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"></span>
+      <span class="logo-mini">Sys</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg">日志系统</span>
+      <span class="logo-lg">监控系统</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -130,12 +132,12 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">主导航</li>
-        <li class="active treeview">
+        <li class="treeview">
           <a href="search.html">
             <i class="fa fa-dashboard"></i> <span>仪表大盘</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="search.html"><i class="fa fa-circle-o"></i> 报错大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 报错大盘</a></li>
             <li><a href="search.html"><i class="fa fa-circle-o"></i> 业务大盘</a></li>
             <li><a href="search.html"><i class="fa fa-circle-o"></i> 网络大盘</a></li>
             <li><a href="search.html"><i class="fa fa-circle-o"></i> 服务大盘</a></li>
@@ -166,7 +168,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="deployment-document.html">
+          <a href="cross.html">
             <i class="glyphicon glyphicon-random"></i> <span>跨域</span>
           </a>
         </li>
@@ -181,7 +183,7 @@
         </li> 
         <li class="treeview">
           <a href="deployment-document.html">
-            <i class="glyphicon glyphicon-flash"></i> <span>跨域</span>
+            <i class="glyphicon glyphicon-flash"></i> <span>缓存</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
@@ -189,14 +191,14 @@
             <li><a href="cache.html"><i class="fa fa-circle-o"></i> 访问情况</a></li>
           </ul>
         </li>
-         <li class="treeview">
+         <li class="active treeview">
           <a href="deployment-document.html">
             <i class="fa fa-lemon-o"></i> <span>数据库</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
             <li><a href="servers.html"><i class="fa fa-circle-o"></i> 访问趋势</a></li>
-            <li><a href="database.html"><i class="fa fa-circle-o"></i> 系统指标</a></li>
+            <li class="active"><a href="database.html"><i class="fa fa-circle-o"></i> 系统指标</a></li>
           </ul>
         </li> 
         <li class="treeview">
@@ -257,202 +259,100 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-       数据大盘
-        <small>Data market</small>
+       系统指标
+        <small>System Index</small>
       </h1>
     </section>
 
     <!-- Main content -->
     <section class="content">
       <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3>1500144</h3>
+          <div class="col-xs-12">
+              <div class="box box-primary log clearfix">
+                <div class="box-header">
+                    <div class="col-sm-6">
+                          <span class="polling"><b>[报表时间]</b>2016-06-26 15:00:00 to 2016-06-27 14:59:59</span>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="btn-group pull-right">
+                              <button type="button" class="btn btn-default btn-trans">-7d</button>
+                              <button type="button" class="btn btn-default btn-trans">-1d</button>
+                              <button type="button" class="btn btn-default btn-trans">-1h</button>
+                              <button type="button" class="btn btn-default btn-trans">+1h</button>
+                              <button type="button" class="btn btn-default btn-trans">+1d</button>
+                              <button type="button" class="btn btn-default btn-trans">+7d</button>
+                              <button type="button" class="btn btn-default btn-trans">now</button>
+                          </div>
+                      </div>
+                </div>  
+                <hr />          
+                <div class="box-body">
+                  <div class="col-md-2">
+                     <div class="data-search"><input type="text" class="form-control input-sm" ><i class="fa fa-fw fa-search data-icon"></i></div>
+                  </div>
+                  <div class="col-md-2">
+                    <form action="#" method="post">
+                      <div class="input-group">
+                        <select class="form-control">
+                          <option value=''>All</option>
+                          <option value='LockAndWait'>LockAndWait</option>
+                          <option value='Memory'>Memory</option>                      
+                          <option value='TransactionAndThread'>TransactionAndThread</option>                      
+                          <option value='DiskAndIO'>DiskAndIO</option>                      
+                          <option value='InnoDB Info'>InnoDB Info</option>                      
+                          <option value='CPU'>CPU</option>
+                        </select>
+                            <span class="input-group-btn">
+                              <button type="submit" class="btn btn-primary btn-flat">GO</button>
+                            </span>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="pull-right">
+                      <span class="polling"><b>时间段：</b></span>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-trans">1小时</button>
+                        <button type="button" class="btn btn-default btn-trans">2小时</button>
+                        <button type="button" class="btn btn-default btn-trans">4小时</button>
+                        <button type="button" class="btn btn-default btn-trans">6小时</button>
+                        <button type="button" class="btn btn-default btn-trans">8小时</button>
+                        <button type="button" class="btn btn-default btn-trans">12小时</button>
+                        <button type="button" class="btn btn-default btn-trans">24小时</button>
+                        <button type="button" class="btn btn-default btn-trans">48小时</button>
+                       </div>
+                    </div>
+                  </div>
+                     
+                    
 
-              <p>总条数</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-ios-analytics"></i>
-            </div>
-            <a href="#" class="small-box-footer">更多 <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>8.4G</h3>
+                </div>
 
-              <p>总大小</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-ios-pulse-strong"></i>
-            </div>
-            <a href="#" class="small-box-footer">更多 <i class="fa fa-arrow-circle-right"></i></a>
+              </div>
           </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>123456322</h3>
-
-              <p>网络流量:(bytes)</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div>
-            <a href="#" class="small-box-footer">更多 <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3>251.84</h3>
-
-              <p>平均响应时间:(ms)</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            <a href="#" class="small-box-footer">更多 <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
       </div>
-      <div class="row">
-        <div class="col-md-6 connectedSortable">
-          <!-- AREA CHART -->
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">年度面积图</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body chart-responsive">
-              <div class="chart" id="revenue-chart" style="height: 300px;"></div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-          <!-- DONUT CHART -->
-          <div class="box box-danger">
-            <div class="box-header with-border">
-              <h3 class="box-title">年度面积图</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body chart-responsive">
-              <div class="chart" id="sales-chart" style="height: 300px; position: relative;"></div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-        </div>
-        <!-- /.col (LEFT) -->
-        <div class="col-md-6 connectedSortable">
-          <!-- LINE CHART -->
-          <div class="box box-info">
-            <div class="box-header with-border">
-              <h3 class="box-title">年度面积图</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body chart-responsive">
-              <div class="chart" id="line-chart" style="height: 300px;"></div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-          <!-- BAR CHART -->
-          <div class="box box-success">
-            <div class="box-header with-border">
-              <h3 class="box-title">年度面积图</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <div class="box-body chart-responsive">
-              <div class="chart" id="bar-chart" style="height: 300px;"></div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-        </div>
-        <!-- /.col (RIGHT) -->
-      </div>
-      <!-- /.row -->
+      
 
     </section>
     <!-- /.content -->
   </div>
 
 
+
 </div>
 <!-- ./wrapper -->
 
-<!-- jQuery 2.2.0 -->
 <script src="plugins/jQuery/jQuery-2.2.0.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="dist/js/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script>
+<script src="dist/js/highcharts.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
-<!-- Morris.js charts -->
-<script src="dist/js/raphael-min.js"></script>
-<script src="plugins/morris/morris.min.js"></script>
-<!-- Sparkline -->
-<script src="plugins/sparkline/jquery.sparkline.min.js"></script>
-<!-- jvectormap -->
-<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="plugins/knob/jquery.knob.js"></script>
-<!-- daterangepicker -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
-<!-- datepicker -->
-<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
-<!-- Bootstrap WYSIHTML5 -->
-<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-<!-- Slimscroll -->
-<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="plugins/fastclick/fastclick.js"></script>
+<script src="plugins/select2/select2.full.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
+
 
 </body>
 </html>

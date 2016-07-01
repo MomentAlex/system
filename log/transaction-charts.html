@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>charts</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/AdminLTE.css">
+     <link rel="stylesheet" href="dist/css/common.css">
+     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+	<script src="plugins/jQuery/jQuery-2.2.0.min.js"></script>
+	<script src="dist/js/highcharts.js"></script>
+	<style type="text/css">
+		ul{width:900px;}
+		ul li{float:left;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li id="container" style="min-width:400px;height:400px"></li>
+		<li id="container2" style="min-width:400px;height:400px"></li>
+		<li id="container3" style="min-width:400px;height:400px"></li>
+		<li id="container4" style="min-width:400px;height:400px"></li>
+	</ul>
+	<table class="table table-hover table-striped table-condensed " style="width:100%;">
+		<tbody><tr><td colspan="8"><h5 style="text-align:center" class="text-center text-info">分布统计</h5></td></tr>
+		<tr>
+			<th class="right">Ip</th>
+			<th class="right">Total</th>
+			<th class="right">Failure</th>
+			<th class="right">Failure%</th>
+			<th class="right">Min(ms)</th>
+			<th class="right">Max(ms)</th>
+			<th class="right">Avg(ms)</th>
+			<th class="right">Std(ms)</th>
+		</tr>
+		<tr class="right">
+			<td>172.16.14.192</td>
+			<td>6</td>
+			<td>0</td>
+			<td>0.0000%</td>
+			<td>2.3</td>
+			<td>204.3</td>
+			<td>81.4</td>
+			<td>88.2</td>
+		</tr>
+	</tbody></table>
+	<div id="pie" style="min-width:400px;height:400px"></div>	
+	<script type="text/javascript">
+		
+$(function () {
+	aa("container","Duration Distribution");
+	aa("container2","Hits Over Time");
+	aa("container3","Average Duration Over Time");
+	aa("container4","Failures Over Time");
+	function aa(container,tittext) {
+		$('#'+container).highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: tittext
+        },
+        xAxis: {
+            categories: [
+                'Jan',
+                'Feb',
+                'Mar',
+                'Apr',
+                'May',
+                'Jun',
+                'Jul',
+                'Aug',
+                'Sep',
+                'Oct',
+                'Nov',
+                'Dec'
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Rainfall (mm)'
+            },
+           lineWidth: 2
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            },
+            series: {
+               pointWidth:25 //柱子之间的距离值
+           }
+        },
+        credits: { 
+            enabled: false //不显示LOGO 
+        },
+        series: [{
+            name: 'Tokyo',
+            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+
+        }]
+    });
+	}
+
+});
+$(function () {
+    $('#pie').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: 'Browser market shares at a specific website, 2014'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                },
+                showInLegend: true
+            }
+        },
+        credits: { 
+            enabled: false //不显示LOGO 
+        },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            data: [
+                ['/cat/r/top',53.0],
+                ['/cat/r/dependency',18.0],
+                {
+                    name: '/cat/r/storage',
+                    y: 8.0,
+                    sliced: true,
+                    selected: true
+                },
+                ['/cat/r/model', 8.0],
+                ['/cat/s/router', 8.0],
+                ['/cat/r/t', 6.0],
+                ['/cat/r/alteration', 22.0],
+                ['/cat/r/p', 12.0],
+                ['/cat/r/matrix', 7.0]
+            ]
+        }]
+    });
+});
+
+
+	</script>
+
+</body>
+</html>

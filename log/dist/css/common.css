@@ -1,4 +1,7 @@
 @charset "UTF-8";
+a{cursor: pointer;}
+.right{text-align: right;}
+.center{text-align: center;}
 .table-prompt{line-height: 35px;}
 .realtime{padding:30px;}
 tr.realtime-console{color:#d73925;}
@@ -20,3 +23,22 @@ tr.realtime-console{color:#d73925;}
 .log-menu li li{margin-right:5px;}
 .navbar-nav button i{margin-right: 5px;}
 .logo-menu>.active>a{background: none;}
+.log{padding-top:20px;}
+.btn-trans{padding:6px 8px;}
+.col-sm-3{padding-right:0px;}
+.trans-time{width:380px;}
+.table-log tr th{color: rgb(0, 0, 238);}
+.table-log tr th span{color:#333;}
+.table-log tr td.left{text-align: left;}
+ul.table-ul li{float:left; list-style: none;}
+.problem-select label{float: left;}
+.pro-btn{margin-top:23px;}
+.table tr th.pro-type{width:90px;}
+.polling{line-height:35px;}
+.cross{padding-top:10px;}
+.cross label{margin-right:10px;}
+.polling b{color:#a94442;margin-right: 5px;}
+.data-search{position: relative;}
+.data-search input{text-indent: 15px;}
+i.data-icon{position: absolute;left:5px;top:7px;}
+hr{margin:5px 0;}

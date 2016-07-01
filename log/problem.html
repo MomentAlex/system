@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>异常--应用</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="dist/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="dist/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.css">
+     <link rel="stylesheet" href="dist/css/common.css">
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+      <!-- Select2 -->
+  <link rel="stylesheet" href="plugins/select2/select2.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="plugins/morris/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini">Sys</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">监控系统</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <ul class="nav navbar-nav log-menu">
+            <li class="active">
+              <a href="index.html" target="_self">
+                <button class="btn btn-block btn-success btn-flat" id="nav_application">
+                  <i class="fa fa-signal"></i>应用
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="Mobile/mobile.html">
+                <button class="btn btn-block btn-flat btn-twitter" id="nav_mobile">
+                  <i class="menu-icon glyphicon glyphicon-phone"></i>移动
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="Browser/browser.html">
+                <button class="btn btn-block btn-flat btn-warning" id="nav_browser">
+                  <i class="fa fa-users"></i>浏览器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="Servers/servers.html">
+                <button class="btn btn-block btn-flat bg-purple" id="nav_server">
+                  <i class="fa fa-cogs"></i>服务器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="configs/configs.html">
+                <button class="btn btn-block btn-flat bg-navy" id="nav_config">
+                  <i class="fa fa-fw fa-adjust"></i>配置
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="Documents/documents.html">
+                <button class="btn btn-block btn-flat bg-aqua" id="nav_document">
+                  <i class="fa fa-fw fa-database"></i>文档
+                </button>
+              </a>
+            </li>
+          </ul>
+       <div class="pull-right">
+        <a class="log-exit"><i class="fa fa-sign-out"></i></a>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>亚历山大·皮尔斯</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">主导航</li>
+        <li class="treeview">
+          <a href="search.html">
+            <i class="fa fa-dashboard"></i> <span>仪表大盘</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 报错大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 业务大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 网络大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 服务大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 数据库大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 缓存大盘</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="transaction.html">
+            <i class="fa fa-th"></i> <span>业务</span>
+            <small class="label pull-right bg-green">新</small>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="transaction.html">
+            <i class="fa fa-laptop"></i>
+            <span>事件</span>
+          </a>
+        </li>
+        <li class="active treeview">
+          <a href="problem.html">
+            <i class="fa fa-edit"></i> <span>异常</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="heartbeat.html">
+            <i class="fa fa-table"></i> <span>心跳</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="cross.html">
+            <i class="glyphicon glyphicon-random"></i> <span>跨域</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="fa fa-cloud"></i> <span>服务</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="servers.html"><i class="fa fa-circle-o"></i> 访问趋势</a></li>
+          </ul>
+        </li> 
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="glyphicon glyphicon-flash"></i> <span>跨域</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="servers.html"><i class="fa fa-circle-o"></i> 访问趋势</a></li>
+            <li><a href="cache.html"><i class="fa fa-circle-o"></i> 访问情况</a></li>
+          </ul>
+        </li>
+         <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="fa fa-lemon-o"></i> <span>数据库</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="servers.html"><i class="fa fa-circle-o"></i> 访问趋势</a></li>
+            <li><a href="database.html"><i class="fa fa-circle-o"></i> 系统指标</a></li>
+          </ul>
+        </li> 
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="glyphicon glyphicon-road"></i> <span>依赖</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 综合大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 趋势图</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 拓扑图</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="fa fa-flask"></i> <span>调用链路</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="fa fa-bar-chart-o"></i> <span>状态</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="fa fa-film"></i> <span>离线</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 报表容量统计</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 服务可用排行</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 服务调用排行</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 线上容量规划</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 线上JAR版本</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 重量访问排行</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 告警智能分析</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="fa fa-film"></i> <span>系统</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 网络监控</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> PAAS监控</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 线上变更</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 告警信息</a></li>
+          </ul>
+        </li>                  
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+         异常
+        <small>Problem</small>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+          <div class="col-xs-12">
+              <div class="box box-primary log clearfix">
+                <div class="box-header">
+                    <div class="col-sm-5">
+                          2016-06-27 14:00:00 to 2016-06-27 14:59:59
+                          <div class="btn-group">
+                             <button type="button" class="btn btn-info btn-flat">全部</button>
+                             <button type="button" class="btn btn-info btn-flat">常用</button>
+                          </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="box-tools">
+                            <div class="has-feedback">
+                              <input type="text" class="form-control input-sm" placeholder="Search Mail">
+                              <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-5">
+                          <div class="btn-group">
+                              <button type="button" class="btn btn-danger btn-trans">切到历史模式</button>
+                              <button type="button" class="btn btn-default btn-trans">-7d</button>
+                              <button type="button" class="btn btn-default btn-trans">-1d</button>
+                              <button type="button" class="btn btn-default btn-trans">-1h</button>
+                              <button type="button" class="btn btn-default btn-trans">+1h</button>
+                              <button type="button" class="btn btn-default btn-trans">+1d</button>
+                              <button type="button" class="btn btn-default btn-trans">+7d</button>
+                              <button type="button" class="btn btn-default btn-trans">now</button>
+                          </div>
+                      </div>
+                </div>
+                <div class="box-body">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger btn-trans">全部</button>
+                        <button type="button" class="btn btn-default btn-trans">172.16.14.192</button>
+                     </div>
+                     <div class="row log problem-select">
+                       <div class="col-md-2">
+                         <div class="form-group">
+                             <label>Long-url</label>
+                              <select class="form-control">
+                                <option value="500">0.5 Sec</option>
+                                <option value="1000">1.0 Sec</option>
+                                <option value="1500">1.5 Sec</option>
+                                <option value="2000">2.0 Sec</option>
+                                <option value="3000">3.0 Sec</option>
+                                <option value="5000">5.0 Sec</option>
+                              </select>
+                          </div>
+                       </div>
+                       <div class="col-md-2">
+                         <div class="form-group">
+                             <label>Long-sql</label>
+                              <select class="form-control">
+                                <option value="50">50 ms</option>
+                                <option value="100">100 ms</option>
+                                <option value="500">500 ms</option>
+                                <option value="1000">1000 ms</option>
+                                <option value="3000">3000 ms</option>
+                                <option value="5000">5000 ms</option>
+                              </select>
+                          </div>
+                       </div>
+                       <div class="col-md-2">
+                         <div class="form-group">
+                             <label>Long-service</label>
+                              <select class="form-control">
+                                <option value="50">50 ms</option>
+                                <option value="100">100 ms</option>
+                                <option value="500">500 ms</option>
+                                <option value="1000">1000 ms</option>
+                                <option value="3000">3000 ms</option>
+                                <option value="5000">5000 ms</option>
+                              </select>
+                          </div>
+                       </div>
+                       <div class="col-md-2">
+                         <div class="form-group">
+                             <label>Long-cache</label>
+                              <select class="form-control">
+                                <option value="10">10 ms</option>
+                                <option value="50">50 ms</option>
+                                <option value="100">100 ms</option>
+                                <option value="500">500 ms</option>
+                              </select>
+                          </div>
+                       </div>
+                       <div class="col-md-2">
+                         <div class="form-group">
+                             <label>Long-call</label>
+                              <select class="form-control">
+                                <option value="50">50 ms</option>
+                                <option value="100">100 ms</option>
+                                <option value="500">500 ms</option>
+                                <option value="1000">1000 ms</option>
+                                <option value="3000">3000 ms</option>
+                                <option value="5000">5000 ms</option>
+                              </select>
+                          </div>
+                       </div>
+                       <div class="col-md-2 pro-btn">
+                         <button type="button" class="btn btn-info btn-flat">查询</button>
+                       </div>
+                     </div>
+                     <div class="table-responsive">
+                          <table class="table table-hover table-log">
+                            <tr>
+                              <th class="pro-type">Type</th>
+                              <th>Total</th>
+                              <th>Status</th>
+                              <th>Count</th>
+                              <th>SampleLinks</th>
+                            </tr>
+                            <tr>
+                                <td class="left" rowspan="4"><small class="label bg-red">error</small><br /><a  data-toggle="modal" data-target="#pro-Modal">[:: show ::]</a>
+                                </td>
+                                <td rowspan="4">19</td>
+                                <td>
+                                  <a  data-toggle="modal"  data-target="#pro-Modal">[:: show ::]</a>
+                                  &nbsp;org.unidal.web.mvc.ActionException
+                                </td>
+                                <td>13&nbsp;</td>
+                                <td >
+                                  <a href="">L</a>
+                                  <a href="">o</a>
+                                  <a href="">g</a>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                  <a  data-toggle="modal"  data-target="#pro-Modal">[:: show ::]</a>
+                                  &nbsp;org.unidal.web.mvc.ActionException
+                                </td>
+                                <td>3&nbsp;</td>
+                                <td >
+                                  <a href="">L</a>
+                                  <a href="">o</a>
+                                  <a href="">g</a>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                  <a  data-toggle="modal"  data-target="#pro-Modal">[:: show ::]</a>
+                                  &nbsp;org.unidal.web.mvc.ActionException
+                                </td>
+                                <td>3&nbsp;</td>
+                                <td >
+                                  <a href="">L</a>
+                                  <a href="">o</a>
+                                  <a href="">g</a>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                  <a  data-toggle="modal" data-target="#pro-Modal">[:: show ::]</a>
+                                  &nbsp;org.unidal.web.mvc.ActionException
+                                </td>
+                                <td>3&nbsp;</td>
+                                <td >
+                                  <a href="">L</a>
+                                  <a href="">o</a>
+                                  <a href="">g</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left"><small class="label bg-green">heartbeat</small><br /><a>[:: show ::]</a>
+                                </td>
+                                <td>41</td>
+                                <td>
+                                  <a>[:: show ::]</a>
+                                  &nbsp;172.16.14.192
+                                </td>
+                                <td>13&nbsp;</td>
+                                <td >
+                                  <a href="/cat/r/m/cat-ac100ec0-407546-13?domain=cat">L</a>
+                                  <a href="/cat/r/m/cat-ac100ec0-407546-48?domain=cat">o</a>
+                                  <a href="/cat/r/m/cat-ac100ec0-407546-97?domain=cat">o</a>
+                                  <a href="/cat/r/m/cat-ac100ec0-407546-144?domain=cat">o</a>
+                                  <a href="/cat/r/m/cat-ac100ec0-407546-161?domain=cat">o</a>
+                                  <a href="/cat/r/m/cat-ac100ec0-407546-164?domain=cat">o</a>                                
+                                  <a href="/cat/r/m/cat-ac100ec0-407546-188?domain=cat">o</a>
+                                  <a href="/cat/r/m/cat-ac100ec0-407546-254?domain=cat">o</a>
+                                  <a href="/cat/r/m/cat-ac100ec0-407546-279?domain=cat">o</a>
+                                  <a href="/cat/r/m/cat-ac100ec0-407546-313?domain=cat">o</a>                                
+                                  <a href="/cat/r/m/cat-ac100ec0-407546-342?domain=cat">o</a>
+                                  <a href="/cat/r/m/cat-ac100ec0-407546-375?domain=cat">g</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left"><small class="label bg-yellow">browser</small><br /><a>[:: show ::]</a>
+                                </td>
+                                <td>41</td>
+                                <td>
+                                  <a>[:: show ::]</a>
+                                  &nbsp;172.16.14.192
+                                </td>
+                                <td>13&nbsp;</td>
+                                <td >
+                                  <a href="/cat/r/m/cat-ac100ec0-407546-13?domain=cat">L</a>
+                                </td>
+                            </tr>                     
+                          </table>
+                        </div> 
+
+                </div>
+
+              </div>
+          </div>
+      </div>
+      
+
+    </section>
+    <!-- /.content -->
+  </div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="pro-Modal" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog" style="width:1000px;">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+               org.unidal.web.mvc.ActionException
+            </h4>
+         </div>
+         <div class="modal-body clearfix">
+            <div style="width:100%;">
+              <ul class="table-ul" style="width:100%;">
+                <li class="hightcharts-container" style="min-width:350px;height:400px"></li>
+                 <li class="charts-pie" style="min-width:500px;height:400px"></li>
+              </ul>
+          </div>
+         </div>
+      </div><!-- /.modal-content -->
+</div><!-- /.modal -->
+</div>
+
+
+</div>
+<!-- ./wrapper -->
+
+<script src="plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<script src="dist/js/highcharts.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="plugins/select2/select2.full.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<script type="text/javascript">
+    $("[id='showInfo']").hide();
+    function showInfoTable(obj) {
+      $("[id='showInfo']").each(function(i) {
+        $("[id='showInfo']").eq(i).hide(1000);
+      });
+      if ($(obj).next().css("display") == ""
+          || $(obj).next().css("display") == "table-row") {
+        $(obj).next().hide(1500);
+      } else {
+        $(obj).next().show(1500);
+      }
+    }
+    $(function () {
+        $(".select2").select2();
+      });
+
+$(function () {
+    $(document).ready(function () {
+        Highcharts.setOptions({
+            global: {
+                useUTC: false
+            }
+        });
+        $('.hightcharts-container').highcharts({
+            chart: {
+                type: 'spline',
+                animation: Highcharts.svg, // don't animate in old IE
+                marginRight: 10,
+                events: {
+                    load: function () {
+
+                        // set up the updating of the chart each second
+                        var series = this.series[0];
+                       // setInterval(function () {
+                            var x = (new Date()).getTime(), // current time
+                                y = Math.random();
+                            series.addPoint([x, y], true, true);
+                        //}, 1000);
+                    }
+                }
+            },
+            title: {
+                text: '错误量'
+            },
+            xAxis: {
+                type: 'datetime',
+                tickPixelInterval: 150
+            },
+            yAxis: {
+                title: {
+                    text: 'Value'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.series.name + '</b><br/>' +
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                        Highcharts.numberFormat(this.y, 2);
+                }
+            },
+            legend: {
+                enabled: true
+            },
+            exporting: {
+                enabled: false
+            },
+            credits: { 
+                enabled: false //不显示LOGO 
+            },
+            series: [{
+                name: 'Random data',
+                data: (function () {
+                    // generate an array of random data
+                    var data = [],
+                        time = (new Date()).getTime(),
+                        i;
+
+                    for (i = -19; i <= 0; i += 1) {
+                        data.push({
+                            x: time + i * 1000,
+                            y: Math.random()
+                        });
+                    }
+                    return data;
+                }())
+            }]
+        });
+    });
+});
+
+
+$(function () {
+    $('.charts-pie').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: '错误分布'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                },
+                showInLegend: true,
+                size: 160
+            }
+        },
+        credits: { 
+                enabled: false //不显示LOGO 
+            },
+        series: [{
+            type: 'pie',
+            name: 'Browser share',
+            data: [
+                ['/cat/r/top',53.0],
+                ['/cat/r/dependency',18.0],
+            ]
+        }]
+    });
+});
+
+   
+</script>
+
+</body>
+</html>
