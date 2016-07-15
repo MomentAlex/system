@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>业务监控配置-应用监控配置-配置</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../dist/css/ionicons.min.css">
+    <!-- Select2 -->
+  <link rel="stylesheet" href="../plugins/select2/select2.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.css">
+     <link rel="stylesheet" href="../dist/css/common.css">
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="../plugins/iCheck/flat/blue.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="../plugins/morris/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="../plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker-bs3.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../dist/js/html5shiv.js"></script>
+  <script src="../dist/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">日志系统</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+     <ul class="nav navbar-nav log-menu">
+            <li>
+              <a href="../index.html" target="_self">
+                <button class="btn btn-block btn-success btn-flat" id="nav_application">
+                  <i class="fa fa-signal"></i>应用
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Mobile/mobile.html">
+                <button class="btn btn-block btn-flat btn-twitter" id="nav_mobile">
+                  <i class="menu-icon glyphicon glyphicon-phone"></i>移动
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Browser/browser.html">
+                <button class="btn btn-block btn-flat btn-warning" id="nav_browser">
+                  <i class="fa fa-users"></i>浏览器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Servers/servers.html">
+                <button class="btn btn-block btn-flat bg-purple" id="nav_server">
+                  <i class="fa fa-cogs"></i>服务器
+                </button>
+              </a>
+            </li>
+            <li class="active">
+              <a href="configs.html">
+                <button class="btn btn-block btn-flat bg-navy" id="nav_config">
+                  <i class="fa fa-fw fa-adjust"></i>配置
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Documents/documents.html">
+                <button class="btn btn-block btn-flat bg-aqua" id="nav_document">
+                  <i class="fa fa-fw fa-database"></i>文档
+                </button>
+              </a>
+            </li>
+          </ul>
+      <div class="pull-right">
+        <a class="log-exit"><i class="fa fa-sign-out"></i></a>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>亚历山大·皮尔斯</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">主导航</li>
+         <li class="treeview">
+          <a href="search.html">
+            <i class="fa fa-cogs"></i> <span>项目配置信息</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="configs.html"><i class="fa fa-circle-o"></i> 项目基本信息</a></li>
+            <li><a href="configs-group.html"><i class="fa fa-circle-o"></i> 项目分配配置</a></li>
+            <li><a href="configs-machine.html"><i class="fa fa-circle-o"></i> 机器分配配置</a></li>
+          </ul>
+        </li>
+        <li class="active treeview">
+          <a href="real-time-protection.html">
+            <i class="fa fa-cloud"></i>
+            <span>应用监控配置</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+             <li class="active"><a href="monitor.html"><i class="fa fa-circle-o"></i> 业务监控配置</a></li>
+            <li><a href="monitor-transaction.html"><i class="fa fa-circle-o"></i> Transation告警</a></li>
+            <li><a href="monitor-Event.html"><i class="fa fa-circle-o"></i> Event告警</a></li>
+            <li><a href="monitor-report.html"><i class="fa fa-circle-o"></i> 报表合并配置</a></li>
+            <li><a href="monitor-exception.html"><i class="fa fa-circle-o"></i> 异常告警配置</a></li>
+            <li><a href="monitor-report.html"><i class="fa fa-circle-o"></i> 心跳报表展示</a></li>
+            <li><a href="monitor-heartbeat.html"><i class="fa fa-circle-o"></i> 心跳告警配置</a></li>
+            <li><a href="monitor-Ping.html"><i class="fa fa-circle-o"></i> Ping告警配置</a></li>
+            <li><a href="monitor-application.html"><i class="fa fa-circle-o"></i> 应用节点阈值</a></li>
+            <li><a href="monitor-dependent.html"><i class="fa fa-circle-o"></i> 应用依赖配置</a></li>
+            <li><a href="monitor-report.html"><i class="fa fa-circle-o"></i> 应用大盘配置</a></li>
+            <li><a href="monitor-database.html"><i class="fa fa-circle-o"></i> 数据库访问告警</a></li>
+            <li><a href="monitor-database.html"><i class="fa fa-circle-o"></i> 缓存访问告警</a></li>
+            <li><a href="monitor-report.html"><i class="fa fa-circle-o"></i> 服务访问告警</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> 存储分组配置</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="real-time-protection.html">
+            <i class="fa fa-bullhorn"></i>
+            <span>系统告警配置</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="monitor.html"><i class="fa fa-circle-o"></i> 网络告警</a></li>
+            <li><a href="monitor-transaction.html"><i class="fa fa-circle-o"></i> 网络拓扑</a></li>
+            <li><a href="monitor-Event.html"><i class="fa fa-circle-o"></i> 数据库告警</a></li>
+            <li><a href="monitor-report.html"><i class="fa fa-circle-o"></i> PaaS告警</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="real-time-protection.html">
+            <i class="glyphicon glyphicon-cog"></i>
+            <span>全局告警配置</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="monitor.html"><i class="fa fa-circle-o"></i> 告警策略</a></li>
+            <li><a href="monitor-transaction.html"><i class="fa fa-circle-o"></i> 默认告警人</a></li>
+            <li><a href="monitor-Event.html"><i class="fa fa-circle-o"></i> 告警服务端</a></li>
+            <li><a href="monitor-report.html"><i class="fa fa-circle-o"></i> 服务端过滤</a></li>
+            <li><a href="monitor-report.html"><i class="fa fa-circle-o"></i> 客户端采样</a></li>
+            <li><a href="monitor-report.html"><i class="fa fa-circle-o"></i> 客户端路由</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        业务监控配置
+        <small>Service Monitoring Configuration</small>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+   <section class="content">
+    <div class="box box-primary">
+        <link rel="stylesheet" href="../dist/css/introjs.css">
+        <script src="../dist/js/intro.js"></script>
+        <form method="post">
+            <h3 class="text-center text-success">编辑应用监控规则</h3>
+            <div class="config" style="display:none">
+                <strong class="text-success">规则ID</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="ruleId" type="text" value="ReceiptVerifyService:Metric:ReceiptVerifySuccess" /> <span class="text-danger">String，唯一性</span>
+            </div>
+            <div id="metrics" class="config">
+                <button class="btn btn-success btn-xs" id="add-metric-button" type="button">
+                    添加匹配对象<i class="icon-plus icon-white"></i>
+                </button>
+                <div id="metricItem" class="metric config">
+                    监控类型：
+                    <label class="checkbox inline">
+                        <input name="count" class="count" type="checkbox" checked="cheked">count
+                    </label>
+                    <label class="checkbox inline">
+                        <input name="sum" class="sum" type="checkbox">sum
+                    </label>
+                    <label class="checkbox inline">
+                        <input name="avg" class="avg" type="checkbox">avg
+                    </label>
+                    <button class="btn btn-danger btn-xs btn-flat delete-metric-button" type="button">
+                        <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                    </button>
+                </div>
+            </div>
+            <style>
+            .metric,
+            .subCondition {
+                margin-bottom: 5px;
+            }
+            
+            .condition,
+            .config {
+                margin-bottom: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 6px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                margin-left: 20px;
+                margin-top: 4px;
+                padding: 4px 4px 4px 4px;
+            }
+            
+            input[type="text"] {
+                margin-bottom: 0px;
+            }
+            </style>
+            <div id="configs">
+                <div class="config" id="configSample">
+                    <p class="text-success text-center">监控规则配置&nbsp;<i tips="" data-trigger="hover" class="glyphicon glyphicon-question-sign" data-toggle="popover" data-placement="left" data-content="监控规则代表一个时间段的规则配置。其下的任意一条监控条件触发则报警"></i>
+                        <button class="btn btn-success btn-xs" id="add-config-button" type="button">
+                            添加监控规则<i class="icon-plus icon-white"></i>
+                        </button>
+                    </p>
+                    <div class="configDuration">
+                        监控开始时间：
+                        <input name="startMinute" class="startMinute input-small" value="00:00" type=" text" placeholder="格式如 00:00" /> 监控结束时间：
+                        <input name="endMinute" class="endMinute input-small" value="24:00" type=" text" placeholder="格式如 24:00" />
+                    </div>
+                    <div class="condition">
+                        <p class="text-center text-success">监控条件 &nbsp;<i tips="" data-trigger="hover" class="glyphicon glyphicon-question-sign" data-toggle="popover" data-placement="left" data-content="监控条件由子条件组成。当其下的全部子条件都被触发时该监控条件才被触发。监控条件之间是并行的关系。"></i></p>
+                        持续分钟：
+                        <input name="configMinute" class="configMinute input-mini" type="text" /> 告警级别：
+                        <select name="level" class="level span2">
+                            <option value="warning">warning</option>
+                            <option value="error">error</option>
+                        </select>
+                        <br>
+                        <p class="text-success">子条件<span class="text-error">【必须全部满足才触发告警】</span></p>
+                        <div class="subconditions">
+                            <div class="subCondition">
+                                &nbsp;&nbsp;&nbsp;规则类型：
+                                <select name="ruleType" class="ruleType">
+                                    <option value="DescVal">下降值(比基线)</option>
+                                    <option value="DescPer">下降百分比(比基线)</option>
+                                    <option value="AscVal">上升值(比基线)</option>
+                                    <option value="AscPer">上升百分比(比基线)</option>
+                                    <option value="MaxVal">最大值(当前值)</option>
+                                    <option value="MinVal">最小值(当前值)</option>
+                                    <option value="FluAscPer">波动上升百分比(当前值)</option>
+                                    <option value="FluDescPer">波动下降百分比(当前值)</option>
+                                    <option value="SumMaxVal">总和最大值(当前值)</option>
+                                    <option value="SumMinVal">总和最小值(当前值)</option>
+                                </select>
+                                阈值：
+                                <input name="value" class="value input-mini" type="text" />
+                                <button class="btn btn-danger btn-xs btn-flat delete-subcondition-button" type="button">
+                                    删除子条件<i class="icon-trash icon-white"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button class="btn btn-success btn-xs btn-flat add-subCondition-button" type="button">
+                            添加子条件<i class="icon-plus icon-white"></i>
+                        </button>
+                        <button class="btn btn-danger btn-xs btn-flat delete-condition-button" type="button">
+                            删除监控条件<i class="icon-trash icon-white"></i>
+                        </button>
+                        <button class="btn btn-info btn-xs btn-flat define-button" type="button">
+                            自定义监控规则<i class="icon-user icon-white"></i>
+                        </button>
+                    </div>
+                    <button class="btn btn-success btn-xs btn-flat add-condition-button" type="button">
+                        添加监控条件<i class="icon-plus icon-white"></i>
+                    </button>
+                    <button class="btn btn-danger btn-xs btn-flat delete-config-button" type="button">
+                        删除监控规则<i class="icon-trash icon-white"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="subCondition" style="display:none">
+                <input name="ruleType" class="ruleType" type="hidden" value="UserDefine" />
+                <textarea name="value" class="value" rows=10 style="width:700px">
+                </textarea>
+                <pre>
+                &nbsp;&nbsp;&nbsp;&nbsp;代码示例如下：
+                  &nbsp;&nbsp;&nbsp;&nbsp;import org.unidal.tuple.Pair;
+                  import com.dianping.cat.report.task.alert.RuleType.MonitorRule;
+                  
+                  public class UserDefinedRule implements MonitorRule{
+                      /*
+                       * 请编写checkData()方法, 除了import标准库，其余部分不能改变
+                       * 该方法接受两个参数： values:当前值数组  baselineValue:基线值数组
+                       * 该方法返回一个Pair对象，key是boolean类型，表明是否触发告警； value是String类型，表明告警内容
+                       * 如：没有触发，返回：return new Pair&lt;Boolean, String&gt;(false, "");
+                       * 触发报警，返回：return new Pair&lt;Boolean, String&gt;(true, "alert info");
+                      */  
+                      @Override
+                       public Pair&lt;Boolean, String&gt; checkData(double[] values, double[] baselineValues) {
+                          return null;
+                      }
+                  }
+                  
+               <span class="text-error">编写完代码后，请将代码合并在一行，然后提交到上方的textarea内。代码中不能存在任何换行。</span>
+              </pre>
+            </div>
+            <script>
+            function initRuleConfigs(filterList) {
+                if (filterList != null) {
+                    var ruleType = $('.ruleType').eq(0);
+                    for (c in filterList) {
+                        var item = filterList[c];
+                        var domItem = ruleType.find('option[value="' + item + '"]');
+
+                        domItem.remove();
+                    }
+                }
+
+                newSubCondition = $('.subCondition').eq(0).clone();
+                newCondition = $('.condition').eq(0).clone();
+                newConfig = $('#configSample').clone();
+                newUserDefineCondition = $(".subCondition").last().clone();
+                newUserDefineCondition.css('display', 'block');
+
+                $('i[tips]').popover();
+
+                $("#configs").delegate(".add-subCondition-button", "click", function() {
+                    addSubCondition($(this), newSubCondition);
+                })
+
+                $("#configs").delegate(".add-condition-button", "click", function() {
+                    addCondition($(this), newCondition);
+                    $('i[tips]').popover();
+                })
+
+                $("#configs").delegate("#add-config-button", "click", function() {
+                    addConfig(newConfig);
+                    $('i[tips]').popover();
+                })
+
+                $("#configs").delegate(".define-button", "click", function() {
+                    changeToUserDefine($(this));
+                })
+
+                $("#configs").delegate(".delete-condition-button, .delete-subcondition-button, .delete-config-button", "click", function() {
+                    $(this).parent().remove();
+                })
+
+                initIntro();
+            }
+
+            function addSubCondition(currentElement, newSubCondition) {
+                currentElement.prev().append(newSubCondition.clone());
+            }
+
+            function addCondition(currentElement, newCondition) {
+                currentElement.before(newCondition.clone());
+            }
+
+            function addConfig(newConfig) {
+                $('#configs').append(newConfig.clone());
+            }
+
+            function changeToUserDefine(currentElement) {
+                var parentNode = currentElement.parent();
+                var subChilds = parentNode.children('.subconditions');
+                subChilds.empty();
+                subChilds.append(newUserDefineCondition.clone());
+
+                var addSubConditionButton = parentNode.children('.add-subCondition-button');
+                var userDefineButton = parentNode.children('.define-button');
+
+                addSubConditionButton.addClass('disabled');
+                userDefineButton.addClass('disabled');
+                addSubConditionButton.off('click');
+                userDefineButton.off('click');
+            }
+
+            function initIntro() {
+                var context = $("#configSample").first();
+                var startButton = $('<button class="btn btn-info btn-xs btn-flat help" type="button">如何使用?</button>');
+
+                context.find("button").first().after(startButton);
+                context.find(".configDuration").first().attr("data-step", "1").attr("data-intro", "定义一个时间段。一个时间段下可以有多个监控条件，只要有一个条件被触发，cat就会发出告警");
+                context.find(".condition").first().attr("data-step", "2").attr("data-intro", "这是一个监控条件。可以由多个子条件构成。只有当该条件下的所有子条件同时触发，该条件才被触发");
+                context.find(".configMinute").first().attr("data-step", "3").attr("data-intro", "设置监控条件的持续时间");
+                context.find("[name='level']").first().attr("data-step", "4").attr("data-intro", "设置监控条件的告警级别<br/>(可与告警策略配合使用。告警策略可以配置某个级别的发送途径、暂停时间、恢复时间)");
+                context.find(".subconditions").first().attr("data-step", "5").attr("data-intro", "这是子条件");
+                context.find(".add-subCondition-button").first().attr("data-step", "6").attr("data-intro", "点击这里，可以新增子条件");
+                context.find(".add-condition-button").first().attr("data-step", "7").attr("data-intro", "点击这里，可以新增一个条件");
+                context.find("#add-config-button").first().attr("data-step", "8").attr("data-intro", "想增加一个时间段的监控规则？点击这里");
+                context.attr("data-step", "9").attr("data-intro", "依然有疑问？请点击 <a href='/cat/r/home?op=view&docName=alert'>这里</a>");
+
+                $(".help").click(function() {
+                    introJs().start();
+                });
+            }
+
+            </script>
+            <div style='text-align: center'>
+                <input class="btn btn-primary btn-sm" id="ruleSubmitButton" type="text" name="submit" value="提交">
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+  </div>
+ 
+</div>
+<!-- ./wrapper -->
+
+
+<!--delete操作-->
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="modaldel" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h4 class="modal-title text-light-blue" id="myModalLabel">
+               <i class="ace-icon fa fa-check"></i>CAT提示
+            </h4>
+         </div>
+         <div class="modal-body">
+            你确定要删除吗？(不可恢复)
+        </div>
+
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" 
+               data-dismiss="modal">Cancel
+            </button>
+            <button type="button" class="btn btn-primary">
+               OK
+            </button>
+         </div>
+      </div><!-- /.modal-content -->
+</div><!-- /.modal -->
+</div>
+
+
+
+
+<script src="../plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+
+<script>
+$(function () { 
+  $('i[tips]').popover();
+
+        newSubCondition = $('.subCondition').eq(0).clone();
+        newCondition = $('.condition').eq(0).clone();
+        newConfig = $('#configSample').clone();
+        newUserDefineCondition = $(".subCondition").last().clone();
+        newUserDefineCondition.css('display', 'block');
+
+        $('i[tips]').popover();
+
+        $("#configs").delegate(".add-subCondition-button", "click", function() {
+            addSubCondition($(this), newSubCondition);
+        })
+
+        $("#configs").delegate(".add-condition-button", "click", function() {
+            addCondition($(this), newCondition);
+            $('i[tips]').popover();
+        })
+
+        $("#configs").delegate("#add-config-button", "click", function() {
+            addConfig(newConfig);
+            $('i[tips]').popover();
+        })
+
+        $("#configs").delegate(".define-button", "click", function() {
+            changeToUserDefine($(this));
+        })
+
+        $("#configs").delegate(".delete-condition-button, .delete-subcondition-button, .delete-config-button", "click", function() {
+            $(this).parent().remove();
+        })
+
+        initIntro();
+});
+
+    function initRuleConfigs(filterList) {
+        if (filterList != null) {
+            var ruleType = $('.ruleType').eq(0);
+            for (c in filterList) {
+                var item = filterList[c];
+                var domItem = ruleType.find('option[value="' + item + '"]');
+
+                domItem.remove();
+            }
+        }
+    }
+
+    function addSubCondition(currentElement, newSubCondition) {
+        currentElement.prev().append(newSubCondition.clone());
+    }
+
+    function addCondition(currentElement, newCondition) {
+        currentElement.before(newCondition.clone());
+    }
+
+    function addConfig(newConfig) {
+        $('#configs').append(newConfig.clone());
+    }
+
+    function changeToUserDefine(currentElement) {
+        var parentNode = currentElement.parent();
+        var subChilds = parentNode.children('.subconditions');
+        subChilds.empty();
+        subChilds.append(newUserDefineCondition.clone());
+
+        var addSubConditionButton = parentNode.children('.add-subCondition-button');
+        var userDefineButton = parentNode.children('.define-button');
+
+        addSubConditionButton.addClass('disabled');
+        userDefineButton.addClass('disabled');
+        addSubConditionButton.off('click');
+        userDefineButton.off('click');
+    }
+
+    function initIntro() {
+        var context = $("#configSample").first();
+        var startButton = $('<button class="btn btn-info btn-xs btn-flat btn-flat help" type="button">如何使用?</button>');
+
+        context.find("button").first().after(startButton);
+        context.find(".configDuration").first().attr("data-step", "1").attr("data-intro", "定义一个时间段。一个时间段下可以有多个监控条件，只要有一个条件被触发，cat就会发出告警");
+        context.find(".condition").first().attr("data-step", "2").attr("data-intro", "这是一个监控条件。可以由多个子条件构成。只有当该条件下的所有子条件同时触发，该条件才被触发");
+        context.find(".configMinute").first().attr("data-step", "3").attr("data-intro", "设置监控条件的持续时间");
+        context.find("[name='level']").first().attr("data-step", "4").attr("data-intro", "设置监控条件的告警级别<br/>(可与告警策略配合使用。告警策略可以配置某个级别的发送途径、暂停时间、恢复时间)");
+        context.find(".subconditions").first().attr("data-step", "5").attr("data-intro", "这是子条件");
+        context.find(".add-subCondition-button").first().attr("data-step", "6").attr("data-intro", "点击这里，可以新增子条件");
+        context.find(".add-condition-button").first().attr("data-step", "7").attr("data-intro", "点击这里，可以新增一个条件");
+        context.find("#add-config-button").first().attr("data-step", "8").attr("data-intro", "想增加一个时间段的监控规则？点击这里");
+        context.attr("data-step", "9").attr("data-intro", "依然有疑问？请点击 <a href='/cat/r/home?op=view&docName=alert'>这里</a>");
+
+        $(".help").click(function() {
+            introJs().start();
+        });
+    }
+
+    
+   
+</script>
+
+
+ 
+</body>
+</html>

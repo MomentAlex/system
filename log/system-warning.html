@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>告警信息--系统--应用</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="dist/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="dist/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.css">
+
+  <link rel="stylesheet" href="dist/css/common.css">
+
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="plugins/iCheck/all.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+  <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
+  <link rel="stylesheet" href="dist/js/jquery.datetimepicker.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="plugins/morris/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="dist/js/html5shiv.js"></script>
+  <script src="dist/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini">Sys</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">监控系统</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <ul class="nav navbar-nav log-menu">
+            <li class="active">
+              <a href="index.html" target="_self">
+                <button class="btn btn-block btn-success btn-flat" id="nav_application">
+                  <i class="fa fa-signal"></i>应用
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="Mobile/mobile.html">
+                <button class="btn btn-block btn-flat btn-twitter" id="nav_mobile">
+                  <i class="menu-icon glyphicon glyphicon-phone"></i>移动
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="Browser/browser.html">
+                <button class="btn btn-block btn-flat btn-warning" id="nav_browser">
+                  <i class="fa fa-users"></i>浏览器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="Servers/servers.html">
+                <button class="btn btn-block btn-flat bg-purple" id="nav_server">
+                  <i class="fa fa-cogs"></i>服务器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="configs/configs.html">
+                <button class="btn btn-block btn-flat bg-navy" id="nav_config">
+                  <i class="fa fa-fw fa-adjust"></i>配置
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="Documents/documents.html">
+                <button class="btn btn-block btn-flat bg-aqua" id="nav_document">
+                  <i class="fa fa-fw fa-database"></i>文档
+                </button>
+              </a>
+            </li>
+          </ul>
+       <div class="pull-right">
+        <a class="log-exit"><i class="fa fa-sign-out"></i></a>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>亚历山大·皮尔斯</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">主导航</li>
+        <li class="treeview">
+          <a href="search.html">
+            <i class="fa fa-dashboard"></i> <span>仪表大盘</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 报错大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 业务大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 网络大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 服务大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 数据库大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 缓存大盘</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="transaction.html">
+            <i class="fa fa-th"></i> <span>业务</span>
+            <small class="label pull-right bg-green">新</small>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="transaction.html">
+            <i class="fa fa-laptop"></i>
+            <span>事件</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="problem.html">
+            <i class="fa fa-edit"></i> <span>异常</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="heartbeat.html">
+            <i class="fa fa-table"></i> <span>心跳</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="cross.html">
+            <i class="glyphicon glyphicon-random"></i> <span>跨域</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="fa fa-cloud"></i> <span>服务</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="servers.html"><i class="fa fa-circle-o"></i> 访问趋势</a></li>
+          </ul>
+        </li> 
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="glyphicon glyphicon-flash"></i> <span>缓存</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="servers.html"><i class="fa fa-circle-o"></i> 访问趋势</a></li>
+            <li><a href="cache.html"><i class="fa fa-circle-o"></i> 访问情况</a></li>
+          </ul>
+        </li>
+         <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="fa fa-lemon-o"></i> <span>数据库</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="servers.html"><i class="fa fa-circle-o"></i> 访问趋势</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 系统指标</a></li>
+          </ul>
+        </li> 
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="glyphicon glyphicon-road"></i> <span>依赖</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="Comprehensive-dependency.html"><i class="fa fa-circle-o"></i> 综合大盘</a></li>
+            <li><a href="tendencyChart.html"><i class="fa fa-circle-o"></i> 趋势图</a></li>
+            <li><a href="topological.html"><i class="fa fa-circle-o"></i> 拓扑图</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="Matrix.html">
+            <i class="fa fa-flask"></i> <span>调用链路</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="state.html">
+            <i class="fa fa-bar-chart-o"></i> <span>状态</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="fa fa-film"></i> <span>离线</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="offline-report.html"><i class="fa fa-circle-o"></i> 报表容量统计</a></li>
+            <li><a href="offline-service.html"><i class="fa fa-circle-o"></i> 服务可用排行</a></li>
+            <li><a href="offline-rank.html"><i class="fa fa-circle-o"></i> 服务调用排行</a></li>
+            <li><a href="offline-online.html"><i class="fa fa-circle-o"></i> 线上容量规划</a></li>
+            <li><a href="offline-jar.html"><i class="fa fa-circle-o"></i> 线上JAR版本</a></li>
+            <li><a href="offline-weight.html"><i class="fa fa-circle-o"></i> 重量访问排行</a></li>
+            <li><a href="offline-alarm.html"><i class="fa fa-circle-o"></i> 告警智能分析</a></li>
+          </ul>
+        </li>
+        <li class="treeview active">
+          <a href="deployment-document.html">
+            <i class="fa fa-film"></i> <span>系统</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="system-network.html"><i class="fa fa-circle-o"></i> 网络监控</a></li>
+            <li><a href="system-paas.html"><i class="fa fa-circle-o"></i> PAAS监控</a></li>
+            <li><a href="system-Online.html"><i class="fa fa-circle-o"></i> 线上变更</a></li>
+            <li class="active"><a href="system-warning.html"><i class="fa fa-circle-o"></i> 告警信息</a></li>
+          </ul>
+        </li>                  
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+       告警信息
+        <small>warning Message</small>
+      </h1>
+    </section>
+
+    <section class="content">
+      <div class="box box-primary clearfix">
+          <div class="col-md-12 log">
+              <span class="help-block pull-left chance-date">可选日期:  </span>
+              <div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="yyyy-mm-dd">
+                  <input type="text" id="startTime" class="form-control date-txt" name="from"  value="2016-07-05 19:58">
+                  <span class="input-group-addon"> to </span>
+                  <input type="text" id="endTime" class="form-control date-txt" name="to" value="2016-07-06 19:58">
+              </div>
+            <div class="input-daterange"> 项目: 
+              <input type="text" class="form-control date-txt" placeholder="cat" >
+            </div>
+            <div class="input-daterange"> 每分钟显示个数:
+              <input type="text" class="form-control date-txt" placeholder="10" style="width:50px;" >
+            </div>
+            <button type="button" class="btn btn-info btn-flat">查询</button>
+          </div>
+      </div>
+      <div class="box box-primary">
+        <div class="box-header">
+            <div class="form-group cross">
+                <label>
+                    <input type="checkbox" class="minimal" checked> All
+                </label>
+                <label>
+                    <input type="checkbox" class="minimal" checked> 业务告警
+                </label>
+                <label>
+                    <input type="checkbox" class="minimal" checked> 网络告警
+                </label>
+                <label>
+                    <input type="checkbox" class="minimal" checked> 系统告警
+                </label>
+                <label>
+                    <input type="checkbox" class="minimal" checked> 异常告警
+                </label>
+                <label>
+                    <input type="checkbox" class="minimal" checked> 心跳告警
+                </label>
+                <label>
+                    <input type="checkbox" class="minimal" checked> 第三方告警
+                </label>
+                <label>
+                    <input type="checkbox" class="minimal" checked> 前端告警
+                </label>
+                <label>
+                    <input type="checkbox" class="minimal" checked> App告警
+                </label>
+                <label>
+                    <input type="checkbox" class="minimal" checked> Web告警
+                </label>
+                 <label>
+                    <input type="checkbox" class="minimal" checked> Zabbix告警
+                </label>
+                 <label>
+                    <input type="checkbox" class="minimal" checked> DB告警
+                </label>
+                <label>
+                    <input type="checkbox" class="minimal" checked> Transaction告警
+                </label>
+            </div>
+        </div>
+        <h4 class="text-red center">该项目在该时间段内状态正常，没有告警信息。</h4>
+ 
+    </div>
+
+    </section>
+  </div>
+
+
+</div>
+<!-- ./wrapper -->
+
+<script src="plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<script src="dist/js/highcharts.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="plugins/select2/select2.full.min.js"></script>
+<script src="dist/js/moment.min.js"></script>
+<!-- iCheck 1.0.1 -->
+<script src="plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="dist/js/jquery.datetimepicker.js"></script>
+<!-- DataTables -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<script type="text/javascript">
+ $(function(){
+    //iCheck for checkbox and radio inputs
+    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+      checkboxClass: 'icheckbox_minimal-blue',
+      radioClass: 'iradio_minimal-blue'
+    });
+  });
+  $(document).ready(function(){
+    $('#startTime').datetimepicker({
+        format:'Y-m-d H:i',
+        step:30,
+        maxDate:0
+      });
+      $('#endTime').datetimepicker({
+        format:'Y-m-d H:i',
+        step:30,
+        maxDate:0
+      });
+  });
+
+
+
+</script>
+
+
+</body>
+</html>

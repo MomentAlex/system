@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>调用链路--应用</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="dist/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="dist/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.css">
+     <link rel="stylesheet" href="dist/css/common.css">
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+      <!-- Select2 -->
+  <link rel="stylesheet" href="plugins/select2/select2.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="plugins/morris/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="dist/js/html5shiv.js"></script>
+  <script src="dist/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini">Sys</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">监控系统</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <ul class="nav navbar-nav log-menu">
+            <li class="active">
+              <a href="index.html" target="_self">
+                <button class="btn btn-block btn-success btn-flat" id="nav_application">
+                  <i class="fa fa-signal"></i>应用
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="Mobile/mobile.html">
+                <button class="btn btn-block btn-flat btn-twitter" id="nav_mobile">
+                  <i class="menu-icon glyphicon glyphicon-phone"></i>移动
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="Browser/browser.html">
+                <button class="btn btn-block btn-flat btn-warning" id="nav_browser">
+                  <i class="fa fa-users"></i>浏览器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="Servers/servers.html">
+                <button class="btn btn-block btn-flat bg-purple" id="nav_server">
+                  <i class="fa fa-cogs"></i>服务器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="configs/configs.html">
+                <button class="btn btn-block btn-flat bg-navy" id="nav_config">
+                  <i class="fa fa-fw fa-adjust"></i>配置
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="Documents/documents.html">
+                <button class="btn btn-block btn-flat bg-aqua" id="nav_document">
+                  <i class="fa fa-fw fa-database"></i>文档
+                </button>
+              </a>
+            </li>
+          </ul>
+       <div class="pull-right">
+        <a class="log-exit"><i class="fa fa-sign-out"></i></a>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>亚历山大·皮尔斯</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">主导航</li>
+        <li class="treeview">
+          <a href="search.html">
+            <i class="fa fa-dashboard"></i> <span>仪表大盘</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 报错大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 业务大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 网络大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 服务大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 数据库大盘</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 缓存大盘</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="transaction.html">
+            <i class="fa fa-th"></i> <span>业务</span>
+            <small class="label pull-right bg-green">新</small>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="transaction.html">
+            <i class="fa fa-laptop"></i>
+            <span>事件</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="problem.html">
+            <i class="fa fa-edit"></i> <span>异常</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="heartbeat.html">
+            <i class="fa fa-table"></i> <span>心跳</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="cross.html">
+            <i class="glyphicon glyphicon-random"></i> <span>跨域</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="fa fa-cloud"></i> <span>服务</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="servers.html"><i class="fa fa-circle-o"></i> 访问趋势</a></li>
+          </ul>
+        </li> 
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="glyphicon glyphicon-flash"></i> <span>缓存</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="servers.html"><i class="fa fa-circle-o"></i> 访问趋势</a></li>
+            <li><a href="cache.html"><i class="fa fa-circle-o"></i> 访问情况</a></li>
+          </ul>
+        </li>
+         <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="fa fa-lemon-o"></i> <span>数据库</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="servers.html"><i class="fa fa-circle-o"></i> 访问趋势</a></li>
+            <li><a href="search.html"><i class="fa fa-circle-o"></i> 系统指标</a></li>
+          </ul>
+        </li> 
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="glyphicon glyphicon-road"></i> <span>依赖</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="Comprehensive-dependency.html"><i class="fa fa-circle-o"></i> 综合大盘</a></li>
+            <li><a href="tendencyChart.html"><i class="fa fa-circle-o"></i> 趋势图</a></li>
+            <li><a href="topological.html"><i class="fa fa-circle-o"></i> 拓扑图</a></li>
+          </ul>
+        </li>
+        <li class="treeview active">
+          <a href="Matrix.html">
+            <i class="fa fa-flask"></i> <span>调用链路</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="state.html">
+            <i class="fa fa-bar-chart-o"></i> <span>状态</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="fa fa-film"></i> <span>离线</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="offline-report.html"><i class="fa fa-circle-o"></i> 报表容量统计</a></li>
+            <li><a href="offline-service.html"><i class="fa fa-circle-o"></i> 服务可用排行</a></li>
+            <li><a href="offline-rank.html"><i class="fa fa-circle-o"></i> 服务调用排行</a></li>
+            <li><a href="offline-online.html"><i class="fa fa-circle-o"></i> 线上容量规划</a></li>
+            <li><a href="offline-jar.html"><i class="fa fa-circle-o"></i> 线上JAR版本</a></li>
+            <li><a href="offline-weight.html"><i class="fa fa-circle-o"></i> 重量访问排行</a></li>
+            <li><a href="offline-alarm.html"><i class="fa fa-circle-o"></i> 告警智能分析</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="deployment-document.html">
+            <i class="fa fa-film"></i> <span>系统</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="system-network.html"><i class="fa fa-circle-o"></i> 网络监控</a></li>
+            <li><a href="system-paas.html"><i class="fa fa-circle-o"></i> PAAS监控</a></li>
+             <li><a href="system-Online.html"><i class="fa fa-circle-o"></i> 线上变更</a></li>
+            <li><a href="system-warning.html"><i class="fa fa-circle-o"></i> 告警信息</a></li>
+          </ul>
+        </li>                  
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+       调用链路
+        <small>Matrix</small>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+          <div class="col-xs-12">
+              <div class="box box-primary log clearfix">
+                <div class="box-header">
+                    <div class="col-sm-6">
+                          <span class="head-date">2016-06-27 14:00:00 to 2016-06-27 14:59:59</span>
+                          <div class="btn-group pull-left head-input">
+                             <button type="button" class="btn btn-info btn-flat"  data-widget="collapse">全部</button>
+                             <button type="button" class="btn btn-info btn-flat"  data-widget="collapse">常用</button>
+                          </div>
+                          <div class="input-group">
+                            <input type="text" name="message" placeholder="Search" class="form-control">
+                                <span class="input-group-btn">
+                                  <button type="submit" class="btn btn-info btn-flat">搜索</button>
+                                </span>
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="btn-group pull-right">
+                              <button type="button" class="btn btn-danger btn-trans">切到历史模式</button>
+                              <button type="button" class="btn btn-default btn-trans">-7d</button>
+                              <button type="button" class="btn btn-default btn-trans">-1d</button>
+                              <button type="button" class="btn btn-default btn-trans">-2h</button>
+                              <button type="button" class="btn btn-default btn-trans">-1h</button>
+                              <button type="button" class="btn btn-default btn-trans">+1h</button>
+                              <button type="button" class="btn btn-default btn-trans">+2h</button>
+                              <button type="button" class="btn btn-default btn-trans">+1d</button>
+                              <button type="button" class="btn btn-default btn-trans">+7d</button>
+                              <button type="button" class="btn btn-default btn-trans">now</button>
+                          </div>
+                      </div>
+                </div>
+                 <div class="box-body">
+                  <div class="well">
+                    <button type="button" class="btn"><i class="fa fa-remove"></i> cat</button>
+                    <button type="button" class="btn"><i class="fa fa-remove"></i> searct</button>
+                  </div>
+                </div>
+                <div class="box-content">
+                    <div class="table-responsive">
+                          <table class="table table-hover table-log">
+                           <tr>
+                             <th rowspan="2">Type</th>
+                             <th rowspan="2"><a>Name</a></th>
+                             <th rowspan="2"><a>Total<br>Hits</a></th>
+                             <th rowspan="2"><a>Avg<br>Duration(ms)</a></th>
+                             <th rowspan="2">Log</th>
+                             <th colspan="3">Call Ratio</th>
+                             <th colspan="3">Call Cost</th>
+                             <th colspan="3">SQL Ratio</th>
+                             <th colspan="3">SQL Cost</th>
+                             <th colspan="3">Cache Ratio</th>
+                             <th colspan="3">Cache Cost</th>
+                           </tr>
+                           <tr>
+                             <td><a>Min</a></td>
+                             <td><a>Max</a></td>
+                             <td><a>Avg</a></td>
+                             <td><a>Time(ms)</a></td>
+                             <td><a>Time%</a></td>
+                             <td>Log</td>
+                             <td><a>Min</a></td>
+                             <td><a>Max</a></td>
+                             <td><a>Avg</a></td>
+                             <td><a>Time(ms)</a></td>
+                             <td><a>Time%</a></td>
+                             <td>Log</td>
+                             <td><a>Min</a></td>
+                             <td><a>Max</a></td>
+                             <td><a>Avg</a></td>
+                             <td><a>Time(ms)</a></td>
+                             <td><a>Time%</a></td>
+                             <td>Log</td>
+                           </tr>
+                           <tr class=" right">
+                            <td class="left">URL</td>
+                            <td class="left longText" style="white-space:normal">/cat/r/efhdhd</td>
+                            <td>3</td>
+                            <td>208.8</td>
+                            <td class="center"><a href="/cat/r/m/cat-ac100ec0-407718-112?domain=cat">L</a></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.0</td>
+                            <td>0</td>
+                            <td>00.0%</td>
+                            <td><a href="/cat/r/m/?domain=cat">L</a></td>
+                          
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1.0</td>
+                            <td>7</td>
+                            <td>03.5%</td>
+                            <td><a href="/cat/r/m/cat-ac100ec0-407718-112?domain=cat">L</a></td>
+                            
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.0</td>
+                            <td>0</td>
+                            <td>00.0%</td>
+                            <td><a href="/cat/r/m/?domain=cat">L</a></td>
+                          </tr>
+                          <tr class=" right">
+                            <td class="left">URL</td>
+                            <td class="left longText" style="white-space:normal">/cat/r/edgsh</td>
+                            <td>3</td>
+                            <td>208.8</td>
+                            <td class="center"><a href="/cat/r/m/cat-ac100ec0-407718-112?domain=cat">L</a></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.0</td>
+                            <td>0</td>
+                            <td>00.0%</td>
+                            <td><a href="/cat/r/m/?domain=cat">L</a></td>
+                          
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1.0</td>
+                            <td>7</td>
+                            <td>03.5%</td>
+                            <td><a href="/cat/r/m/cat-ac100ec0-407718-112?domain=cat">L</a></td>
+                            
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.0</td>
+                            <td>0</td>
+                            <td>00.0%</td>
+                            <td><a href="/cat/r/m/?domain=cat">L</a></td>
+                          </tr>
+                          <tr class=" right">
+                            <td class="left">URL</td>
+                            <td class="left longText" style="white-space:normal">/cat/r/esjk</td>
+                            <td>3</td>
+                            <td>208.8</td>
+                            <td class="center"><a href="/cat/r/m/cat-ac100ec0-407718-112?domain=cat">L</a></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.0</td>
+                            <td>0</td>
+                            <td>00.0%</td>
+                            <td><a href="/cat/r/m/?domain=cat">L</a></td>
+                          
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1.0</td>
+                            <td>7</td>
+                            <td>03.5%</td>
+                            <td><a href="/cat/r/m/cat-ac100ec0-407718-112?domain=cat">L</a></td>
+                            
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.0</td>
+                            <td>0</td>
+                            <td>00.0%</td>
+                            <td><a href="/cat/r/m/?domain=cat">L</a></td>
+                          </tr>
+                          <tr class=" right">
+                            <td class="left">URL</td>
+                            <td class="left longText" style="white-space:normal">/cat/r/edhjkk</td>
+                            <td>3</td>
+                            <td>208.8</td>
+                            <td class="center"><a href="/cat/r/m/cat-ac100ec0-407718-112?domain=cat">L</a></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.0</td>
+                            <td>0</td>
+                            <td>00.0%</td>
+                            <td><a href="/cat/r/m/?domain=cat">L</a></td>
+                          
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1.0</td>
+                            <td>7</td>
+                            <td>03.5%</td>
+                            <td><a href="/cat/r/m/cat-ac100ec0-407718-112?domain=cat">L</a></td>
+                            
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.0</td>
+                            <td>0</td>
+                            <td>00.0%</td>
+                            <td><a href="/cat/r/m/?domain=cat">L</a></td>
+                          </tr>
+                          </table>
+                    </div>                   
+                </div>
+
+              </div>
+          </div>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+
+
+
+</div>
+<!-- ./wrapper -->
+
+<script src="plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<script src="dist/js/highcharts.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="plugins/select2/select2.full.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+
+
+</body>
+</html>

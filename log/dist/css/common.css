@@ -40,5 +40,114 @@ ul.table-ul li{float:left; list-style: none;}
 .polling b{color:#a94442;margin-right: 5px;}
 .data-search{position: relative;}
 .data-search input{text-indent: 15px;}
-i.data-icon{position: absolute;left:5px;top:7px;}
+i.data-icon{position: absolute;left:5px;top:10px;}
 hr{margin:5px 0;}
+.btn-yilai .btn{color:#fff;float:left;}
+.off-label{line-height:34px;text-align: right}
+.chance-date{margin-right:10px;}
+.input-group .date-txt,
+.date-txt{
+	width:188px;
+	display: inline-block;
+}
+.input-group .input-group-addon {
+    border-color: #e5e5e5;
+    background: #e5e5e5;
+    min-width: 39px;
+    float:left;
+    height:34px;
+    line-height: 20px;
+}
+.input-daterange{
+	float:left;
+	margin-right:10px;
+}
+.box{
+	padding-bottom: 20px;
+}
+.head-date{
+	float: left;
+	line-height: 34px;
+	margin-right:10px;
+}
+.head-input {
+	margin-right: 10px;
+}
+.data-search {
+	float:left;
+	margin-left:15px;
+}
+.col-md-1,.col-md-2{
+	padding-right:0;
+	text-align: right;
+}
+.config-search{
+	position: relative;
+}
+.config-search 
+.form-control{
+	text-indent: 1em;
+}
+.nav-search-icon{
+	z-index: 222;
+	position:absolute;
+	top:10px;
+	left:10px;
+}
+.table-config span{
+	color:#ff0000;
+}
+.table-config em{
+	line-height: 34px;
+	font-style: normal;
+}
+.configtxt{
+	width:275px;
+}
+.confbig{
+	width: 500px;
+}
+.configcen{
+	width:430px;
+}
+.configcen:focus{
+	border-color: #dd4b39;
+    box-shadow: none;
+}
+.modal-table .form-control{
+	float: left;
+}
+.modal-table i{
+	color:#dd4b39;
+	font-size:18px;
+}
+.col-sm-6,
+.col-md-6{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.dashboard {
+    background: url('../img/checked.gif') no-repeat;
+}
+label.inline {
+    margin: 0px 15px;
+}
+.table-toolbar{
+	margin-bottom: 15px;
+}
+.js-example-tags {
+    display: inline-block;
+    padding: 4px 6px;
+    color: #777;
+    vertical-align: middle;
+    background-color: #FFF;
+    border: 1px solid #d5d5d5;
+    width: 300px;
+}
+.box-content{
+	padding:10px;
+}
+.well{
+	margin-bottom: 0px;
+	padding:10px;
+}
