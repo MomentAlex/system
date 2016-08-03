@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>项目首页-文档</title>
+ <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../dist/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.css">
+  <link rel="stylesheet" href="../dist/css/common.css">
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../dist/js/html5shiv.js"></script>
+  <script src="../dist/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini">BL</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">日志系统</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+     <ul class="nav navbar-nav log-menu">
+            <li>
+              <a href="../index.html" target="_self">
+                <button class="btn btn-block btn-success btn-flat" id="nav_application">
+                  <i class="fa fa-signal"></i>应用
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Mobile/mobile.html">
+                <button class="btn btn-block btn-flat btn-twitter" id="nav_mobile">
+                  <i class="menu-icon glyphicon glyphicon-phone"></i>移动
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Browser/browser.html">
+                <button class="btn btn-block btn-flat btn-warning" id="nav_browser">
+                  <i class="fa fa-users"></i>浏览器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Servers/servers.html">
+                <button class="btn btn-block btn-flat bg-purple" id="nav_server">
+                  <i class="fa fa-cogs"></i>服务器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../configs/configs.html">
+                <button class="btn btn-block btn-flat bg-navy" id="nav_config">
+                  <i class="fa fa-fw fa-adjust"></i>配置
+                </button>
+              </a>
+            </li>
+            <li class="active">
+              <a href="documents.html">
+                <button class="btn btn-block btn-flat bg-aqua" id="nav_document">
+                  <i class="fa fa-fw fa-database"></i>文档
+                </button>
+              </a>
+            </li>
+          </ul>
+      <div class="pull-right">
+        <a class="log-exit"><i class="fa fa-sign-out"></i></a>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>亚历山大·皮尔斯</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+        </div>
+      </div>
+      
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">主导航</li>
+         <li class="treeview">
+          <a href="documents.html">
+            <i class="glyphicon glyphicon-home"></i> <span>项目首页</span> 
+          </a>
+        </li>
+        <li class="active treeview">
+          <a href="version-description.html">
+            <i class="glyphicon glyphicon-book"></i>
+            <span>版本说明</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="documents-deployment.html">
+            <i class="fa fa-cogs"></i>
+            <span>部署文档</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="documents-integrated.html">
+            <i class="fa fa-cutlery"></i>
+            <span>集成文档</span>
+          </a>
+        </li>
+         <li class="treeview">
+          <a href="application-monitoring.html">
+            <i class="fa fa-users"></i>
+            <span>应用监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="mobile-monitor.html">
+            <i class="glyphicon glyphicon-phone"></i>
+            <span>移动监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="browser-monitor.html">
+            <i class="fa fa-globe"></i>
+            <span>浏览器监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="server-monitor.html">
+            <i class="fa fa-desktop"></i>
+            <span>服务端监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="alarm-document.html">
+            <i class="fa fa-bell"></i>
+            <span>告警文档</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="interface-document.html">
+            <i class="glyphicon glyphicon-align-left"></i>
+            <span>接口文档</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="developer-document.html">
+            <i class="glyphicon glyphicon-refresh"></i>
+            <span>开发者文档</span>
+          </a>
+        </li>
+         <li class="treeview">
+          <a href="common-problem.html">
+            <i class="fa fa-inbox"></i>
+            <span>常见问题</span>
+          </a>
+        </li>
+         <li class="treeview">
+          <a href="plug-in.html">
+            <i class="fa fa-key"></i>
+            <span>插件扩展</span>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        日志搜索
+        <small>Search</small>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+     <div class="box box-primary">
+        <div class="box-body">
+          <table class='table table-bordered table-striped table-condensed  '>
+            <tr class="text-success">
+                <th width="8%">版本</th>
+                <th width="82%">说明</th>
+                <th width="10%">发布时间</th>
+            </tr>
+            <tr>
+                <td>1.2.8</td>
+                <td>1、合并单独的Event，Metric等原子消息，减少消息总量。修复了启动时候连接服务端的bug。</td>
+                <td>2014-12-09</td>
+            </tr>
+            <tr>
+                <td>1.1.9</td>
+                <td>1、修复了消息截断时候，统计时间的bug</td>
+                <td>2014-12-09</td>
+            </tr>
+            <tr>
+                <td>1.1.5</td>
+                <td>1、修复了CAT初始化路由出错导致监控信息丢失的bug</td>
+                <td>2014-11-21</td>
+            </tr>
+            <tr>
+                <td>1.1.2</td>
+                <td>1、动态配置CAT的路由策略，支持统一项目名调整</td>
+                <td>2014-08-02</td>
+            </tr>
+            <tr>
+                <td>1.0.1</td>
+                <td>1、将ABtest的功能从监控中分离</td>
+                <td>2014-01-02</td>
+            </tr>
+            <tr>
+                <td>1.0.0</td>
+                <td>1、修复了CAT监控初始化当服务端都出异常的状况，不会自动连接的Bug</td>
+                <td>2013-12-20</td>
+            </tr>
+            <tr>
+                <td>0.6.2</td>
+                <td>1、支持java job的监控，优化了cat的API</td>
+                <td>2013-08-06</td>
+            </tr>
+            <tr>
+                <td>0.6.1</td>
+                <td>1、cat客户端的消息长度设置了子消息的最大长度（500），多的消息直接丢弃，以防止内存过大的CAT消息内存泄露</td>
+                <td>2013-06-06</td>
+            </tr>
+            <tr>
+                <td>0.6.0</td>
+                <td>1、增加业务监控埋点API。2、修复时间戳调整bug。3、修复classpath获取bug。4、修复CatFilter支持Forward请求</td>
+                <td>2013-03-26</td>
+            </tr>
+            <tr>
+                <td>0.4.1</td>
+                <td>1、默认禁止心跳线程获取线程锁信息，以降低对业务线程的影响。</td>
+                <td>2012-09-06</td>
+            </tr>
+            <tr>
+                <td>0.4.0</td>
+                <td>1、支持开关动态关闭。2、后端存储重构，支持分布式Logview的查看(关联pigeon的call)。</td>
+                <td>2012-08-20</td>
+            </tr>
+            <tr>
+                <td>0.3.4</td>
+                <td>1、规范了CAT客户端的日志。2、规范了后台模块的加载顺序。3、统一服务端配置存取。4、新增心跳报表的Http线程 </td>
+                <td>2012-07-25</td>
+            </tr>
+            <tr>
+                <td>0.3.3</td>
+                <td>1、修改CAT线程为后台Dameon线程。2、减少CAT的日志输出。3、修复了极端情况客户端丢失部分消息。4、支持CAT的延迟加载。5、修复了0.3.2一个getLog的bug</td>
+                <td>2012-07-17</td>
+            </tr>
+            <tr>
+                <td>0.3.2</td>
+                <td>1、修复了配置单个服务器时候，服务器重启，客户端断开链接bug。2、修复了CAT不正常加载时候，内存溢出的问题。（此版本有问题，请更新至0.3.3）</td>
+                <td>2012-07-01</td>
+            </tr>
+            <tr>
+                <td>0.3.1</td>
+                <td>1、修复CAT在业务testcase的使用，支持业务运行Testcase在Console上看到运行情况。</td>
+                <td>2012-06-25</td>
+            </tr>
+            <tr>
+                <td>0.3.0</td>
+                <td>1、修复CAT在Transaction Name的Nullpoint异常。</td>
+                <td>2012-06-15</td>
+            </tr>
+            <tr>
+                <td>0.2.5</td>
+                <td>1、心跳消息监控新增oldgc和newgc 2、更新了ThreadLocal的线程模型（修复了一些无头消息和部分错乱消息）</td>
+                <td>2012-05-01</td>
+            </tr>
+        </table>
+        </div>
+      </div>
+    </section>
+  </div>
+ 
+</div>
+<!-- ./wrapper -->
+
+<script src="../plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+
+</body>
+</html>

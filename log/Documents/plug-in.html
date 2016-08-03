@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>插件扩展-文档</title>
+ <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../dist/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.css">
+  <link rel="stylesheet" href="../dist/css/common.css">
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../dist/js/html5shiv.js"></script>
+  <script src="../dist/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini">BL</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">日志系统</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+     <ul class="nav navbar-nav log-menu">
+            <li>
+              <a href="../index.html" target="_self">
+                <button class="btn btn-block btn-success btn-flat" id="nav_application">
+                  <i class="fa fa-signal"></i>应用
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Mobile/mobile.html">
+                <button class="btn btn-block btn-flat btn-twitter" id="nav_mobile">
+                  <i class="menu-icon glyphicon glyphicon-phone"></i>移动
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Browser/browser.html">
+                <button class="btn btn-block btn-flat btn-warning" id="nav_browser">
+                  <i class="fa fa-users"></i>浏览器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Servers/servers.html">
+                <button class="btn btn-block btn-flat bg-purple" id="nav_server">
+                  <i class="fa fa-cogs"></i>服务器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../configs/configs.html">
+                <button class="btn btn-block btn-flat bg-navy" id="nav_config">
+                  <i class="fa fa-fw fa-adjust"></i>配置
+                </button>
+              </a>
+            </li>
+            <li class="active">
+              <a href="documents.html">
+                <button class="btn btn-block btn-flat bg-aqua" id="nav_document">
+                  <i class="fa fa-fw fa-database"></i>文档
+                </button>
+              </a>
+            </li>
+          </ul>
+      <div class="pull-right">
+        <a class="log-exit"><i class="fa fa-sign-out"></i></a>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>亚历山大·皮尔斯</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+        </div>
+      </div>
+      
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">主导航</li>
+         <li class="treeview">
+          <a href="documents.html">
+            <i class="glyphicon glyphicon-home"></i> <span>项目首页</span> 
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="version-description.html">
+            <i class="glyphicon glyphicon-book"></i>
+            <span>版本说明</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="documents-deployment.html">
+            <i class="fa fa-cogs"></i>
+            <span>部署文档</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="documents-integrated.html">
+            <i class="fa fa-cutlery"></i>
+            <span>集成文档</span>
+          </a>
+        </li>
+         <li class="treeview">
+          <a href="application-monitoring.html">
+            <i class="fa fa-users"></i>
+            <span>应用监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="mobile-monitor.html">
+            <i class="glyphicon glyphicon-phone"></i>
+            <span>移动监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="browser-monitor.html">
+            <i class="fa fa-globe"></i>
+            <span>浏览器监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="server-monitor.html">
+            <i class="fa fa-desktop"></i>
+            <span>服务端监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="alarm-document.html">
+            <i class="fa fa-bell"></i>
+            <span>告警文档</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="interface-document.html">
+            <i class="glyphicon glyphicon-align-left"></i>
+            <span>接口文档</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="developer-document.html">
+            <i class="glyphicon glyphicon-refresh"></i>
+            <span>开发者文档</span>
+          </a>
+        </li>
+         <li class="treeview">
+          <a href="common-problem.html">
+            <i class="fa fa-inbox"></i>
+            <span>常见问题</span>
+          </a>
+        </li>
+         <li class="active treeview">
+          <a href="plug-in.html">
+            <i class="fa fa-key"></i>
+            <span>插件扩展</span>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        插件扩展
+        <small>Plug-in Extension</small>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="box box-primary">
+          <div class="box-header">
+            <ul>
+              <li>下载<a href="">Chrome扩展插件</a>，保存到cat.crx文件</li>
+              <li>选择菜单：窗口 --&gt; 扩展程序, 或者在URL中输入：chrome://extensions</li>
+              <li>用鼠标将cat.crx文件拖到扩展程序管理页面，开始安装</li>
+              <li>现在，对于支持CAT的页面，浏览器URL框中会出现CAT小图标<br />
+                  <img  src="../images/cat-chrome.png">
+                点击查看CAT Logview</li>
+            </ul>
+          </div>
+          
+      </div>
+    </section>
+  </div>
+ 
+</div>
+<!-- ./wrapper -->
+
+<script src="../plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+
+</body>
+</html>

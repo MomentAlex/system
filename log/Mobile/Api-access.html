@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Api访问趋势-移动</title>
+    <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../dist/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.css">
+
+  <link rel="stylesheet" href="../dist/css/common.css">
+
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
+  <link rel="stylesheet" href="../dist/js/jquery.datetimepicker.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="../plugins/morris/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="../plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="dist/js/html5shiv.js"></script>
+  <script src="dist/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">日志系统</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+     <ul class="nav navbar-nav log-menu">
+            <li class="active">
+              <a href="../index.html" target="_self">
+                <button class="btn btn-block btn-success btn-flat" id="nav_application">
+                  <i class="fa fa-signal"></i>应用
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="mobile.html">
+                <button class="btn btn-block btn-flat btn-twitter" id="nav_mobile">
+                  <i class="menu-icon glyphicon glyphicon-phone"></i>移动
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Browser/browser.html">
+                <button class="btn btn-block btn-flat btn-warning" id="nav_browser">
+                  <i class="fa fa-users"></i>浏览器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Servers/servers.html">
+                <button class="btn btn-block btn-flat bg-purple" id="nav_server">
+                  <i class="fa fa-cogs"></i>服务器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../configs/configs.html">
+                <button class="btn btn-block btn-flat bg-navy" id="nav_config">
+                  <i class="fa fa-fw fa-adjust"></i>配置
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Documents/documents.html">
+                <button class="btn btn-block btn-flat bg-aqua" id="nav_document">
+                  <i class="fa fa-fw fa-database"></i>文档
+                </button>
+              </a>
+            </li>
+          </ul>
+      <div class="pull-right">
+        <a class="log-exit"><i class="fa fa-sign-out"></i></a>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>亚历山大·皮尔斯</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+        </div>
+      </div>
+      
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">主导航</li>
+         <li class="active">
+          <a href="mobile.html">
+            <i class="fa fa-dashboard"></i> <span>仪表大盘</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="index.html">
+            <i class="glyphicon glyphicon-phone"></i> <span>移动</span>
+            <small class="label pull-right bg-green">新</small>
+          </a>
+           <ul class="treeview-menu">
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> Api访问趋势</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> Api访问分布</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> Api访问日报表</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> App页面测速</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> App测速分布</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> 每天报表统计</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> 长连访问趋势</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> 长连访问分布</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> AppCrash日志</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> dpid实时日志</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> dpid离线日志</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="real-time-protection.html">
+            <i class="fa fa-users"></i>
+            <span>设置</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> App监控</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> Api规则</a></li>
+            <li><a href="real-time-protection.html"><i class="fa fa-circle-o"></i> App告警</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Api访问趋势
+        <small>Api Access Trends</small>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="box box-primary clearfix">
+          <div class="box-header">
+              <div class="col-md-12 log">
+                  <div class="input-daterange"> 可选日期:
+                      <input type="text" id="Time" class="form-control date-txt" value="2016-07-05">
+                  </div>
+                  <div class="input-daterange"> 命令字:
+                      <input type="text" class="form-control date-txt" value="shop.bin|???">
+                  </div>
+                  <div class="input-daterange"> 返回码:
+                      <select class="form-control date-txt">
+                          <option value="">All</option>
+                          <option value="450">???????</option>
+                          <option value="-100">-100 ???????</option>
+                          <option value="-101">-101 PushServer??API??</option>
+                      </select>
+                  </div>
+                  <div class="input-daterange"> 网络类型:
+                      <select class="form-control opera-txt">
+                          <option value="">All</option>
+                      </select>
+                  </div>
+                  <div class="input-daterange"> 运营商:
+                      <select class="form-control opera-txt">
+                          <option value="">All</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="col-md-12 log">
+                  <div class="input-daterange"> 版本:
+                      <select class="form-control date-txt">
+                          <option value="">All</option>
+                      </select>
+                  </div>
+                  <div class="input-daterange"> 连接类型:
+                      <select class="form-control date-txt">
+                          <option value="">All</option>
+                      </select>
+                  </div>
+                  <div class="input-daterange"> 平台:
+                      <select class="form-control date-txt">
+                          <option value="">All</option>
+                      </select>
+                  </div>
+                  <div class="input-daterange"> 地区:
+                      <select class="form-control opera-txt">
+                          <option value="">All</option>
+                      </select>
+                  </div>
+                  <button type="button" class="btn btn-info btn-flat">查询</button>
+                  <input type="checkbox" class="in-check" id="checkbox" onclick="check()">
+                  <label for="checkbox" style="display: -webkit-inline-box;">选择对比</label>
+              </div>
+          </div>
+          <div class="box-body" id="contrast" style="display:none;">
+              <div class="col-md-12 log">
+                  <div class="input-daterange"> 可选日期:
+                      <input type="text" id="Time" class="form-control date-txt" value="2016-07-05">
+                  </div>
+                  <div class="input-daterange"> 命令字:
+                      <input type="text" class="form-control date-txt" value="shop.bin|???">
+                  </div>
+                  <div class="input-daterange"> 返回码:
+                      <select class="form-control date-txt">
+                          <option value="">All</option>
+                          <option value="450">???????</option>
+                          <option value="-100">-100 ???????</option>
+                          <option value="-101">-101 PushServer??API??</option>
+                      </select>
+                  </div>
+                  <div class="input-daterange"> 网络类型:
+                      <select class="form-control opera-txt">
+                          <option value="">All</option>
+                      </select>
+                  </div>
+                  <div class="input-daterange"> 运营商:
+                      <select class="form-control opera-txt">
+                          <option value="">All</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="col-md-12 log">
+                  <div class="input-daterange"> 版本:
+                      <select class="form-control date-txt">
+                          <option value="">All</option>
+                      </select>
+                  </div>
+                  <div class="input-daterange"> 连接类型:
+                      <select class="form-control date-txt">
+                          <option value="">All</option>
+                      </select>
+                  </div>
+                  <div class="input-daterange"> 平台:
+                      <select class="form-control date-txt">
+                          <option value="">All</option>
+                      </select>
+                  </div>
+                  <div class="input-daterange"> 地区:
+                      <select class="form-control opera-txt">
+                          <option value="">All</option>
+                      </select>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="box box-solid">
+        <!-- Custom Tabs -->
+          <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab_1" data-toggle="tab">请求数</a></li>
+              <li><a href="#tab_2" data-toggle="tab">成功率</a></li>
+              <li><a href="#tab_3" data-toggle="tab">成功延时</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab_1">
+                <div id="highcharts0" style="min-width:300px;height:350px"></div>
+              </div>
+              <!-- /.tab-pane -->
+              <div class="tab-pane" id="tab_2">
+                
+              </div>
+              <!-- /.tab-pane -->
+              <div class="tab-pane" id="tab_3">
+                
+              </div>
+              <!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-content -->
+          </div>
+          <!-- nav-tabs-custom -->
+      </div>
+
+      <div class="box box-primary clearfix">
+        <table class="table table-striped table-condensed table-bordered table-hover">
+            <thead>
+                <tr class="text-success">
+                    <th class="right text-success">类别</th>
+                    <th class="right text-success">成功率(%)</th>
+                    <th class="right text-success">总请求数</th>
+                    <th class="right text-success">成功平均延迟(ms)</th>
+                    <th class="right text-success">平均发包(B)</th>
+                    <th class="right text-success">平均回包(B)</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <h4 class="center text-success">点击展开，进行OLAP查询</h4>
+        <table id="comparison_content" class="table table-striped table-condensed table-bordered table-hover">
+          <thead>
+              <tr>
+                  <th class="right text-success">网络类型</th>
+                  <th class="right text-success">版本</th>
+                  <th class="right text-success">连接类型</th>
+                  <th class="right text-success">平台</th>
+                  <th class="right text-success">地区</th>
+                  <th class="right text-success">运营商</th>
+                  <th class="right"><a href="javascript:queryGroupBy('success');">成功率</a>(%)</th>
+                  <th class="right"><a href="javascript:queryGroupBy('request');">总请求数</a></th>
+                  <th class="right"><a href="javascript:queryGroupBy('delay');">成功平均延迟</a>(ms)</th>
+                  <th class="right"><a href="javascript:queryGroupBy('requestPackage');">平均发包</a>(B)</th>
+                  <th class="right"><a href="javascript:queryGroupBy('responsePackage');">平均回包</a>(B)</th>
+              </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+
+    </div>
+
+  </section>
+
+  </div>
+ 
+</div>
+<!-- ./wrapper -->
+
+<script src="../plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<script src="../dist/js/highcharts.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../plugins/select2/select2.full.min.js"></script>
+<script src="../dist/js/moment.min.js"></script>
+<script type="text/javascript" src="../dist/js/jquery.datetimepicker.js"></script>
+<!-- DataTables -->
+<script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<script type="text/javascript">
+   $(document).ready(function(){
+    $('#Time').datetimepicker({
+        format:'Y-m-d H:i',
+        step:30,
+        maxDate:0
+      });
+  });
+   function check(){
+      var checkValue=document.getElementById("checkbox").checked;
+      if(checkValue == true){
+          $("#contrast").slideDown();
+      }else{
+          $("#contrast").slideUp();
+      }
+    };
+
+$(function () {
+    chartline("highcharts0","请求数（个/5分钟）");
+    
+    function chartline(container,tittext){
+      $('#'+container).highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: tittext
+        },
+        xAxis: {
+            tickInterval: 0.1,
+            tickPixelInterval:10,
+            max:24
+        },
+        yAxis: {
+            min: 0
+        },
+        tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+        },
+
+        plotOptions: {
+            spline: {
+                marker: {
+                    enabled: false
+                }
+            }
+        },
+        credits: { 
+            enabled: false //不显示LOGO 
+        },
+        series: [{
+            name: '当前值',
+            data: [
+                null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+            ]
+        }]
+    });
+    }
+    
+});
+</script>
+
+
+
+</body>
+</html>

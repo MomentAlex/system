@@ -118,17 +118,6 @@
           <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
         </div>
       </div>
-      <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
-      <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">主导航</li>
@@ -137,18 +126,18 @@
             <i class="fa fa-dashboard"></i> <span>仪表大盘</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="search.html"><i class="fa fa-circle-o"></i> 报错大盘</a></li>
-            <li><a href="search.html"><i class="fa fa-circle-o"></i> 业务大盘</a></li>
+            <li><a href="index.html"><i class="fa fa-circle-o"></i> 报错大盘</a></li>
+            <li><a href="market-business.html"><i class="fa fa-circle-o"></i> 业务大盘</a></li>
             <li><a href="search.html"><i class="fa fa-circle-o"></i> 网络大盘</a></li>
             <li><a href="search.html"><i class="fa fa-circle-o"></i> 服务大盘</a></li>
-            <li><a href="search.html"><i class="fa fa-circle-o"></i> 数据库大盘</a></li>
-            <li><a href="search.html"><i class="fa fa-circle-o"></i> 缓存大盘</a></li>
+            <li><a href="market-database.html"><i class="fa fa-circle-o"></i> 数据库大盘</a></li>
+            <li><a href="market-cache.html"><i class="fa fa-circle-o"></i> 缓存大盘</a></li>
           </ul>
         </li>
         <li class="active treeview">
           <a href="transaction.html">
             <i class="fa fa-th"></i> <span>业务</span>
-            <small class="label pull-right bg-green">新</small>
+            
           </a>
         </li>
         <li class="treeview">
@@ -294,7 +283,7 @@
                               <button type="button" class="btn btn-default btn-trans">+2h</button>
                               <button type="button" class="btn btn-default btn-trans">+1d</button>
                               <button type="button" class="btn btn-default btn-trans">+7d</button>
-                              <button type="button" class="btn btn-default btn-trans">now</button>
+                              <button type="button" class="btn btn-default btn-trans"><a>now</a></button>
                           </div>
                       </div>
                 </div>
@@ -308,6 +297,7 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-danger btn-trans">全部</button>
                         <button type="button" class="btn btn-default btn-trans">172.16.14.192</button>
+                        <button type="button" class="btn btn-default btn-trans">192.16.14.167</button>
                      </div>
                      <div class="table-responsive log">
                           <table class="table table-hover table-log">
@@ -326,12 +316,12 @@
                               <th>QPS</th>
                             </tr>
                             <tr id="fieldInfo" onclick="showInfoTable(this)">
-                                <td class="left"><a>[:: show ::]</a>
+                                <td class="left"><a class="label bg-green">[ show ]</a>
                                 <br /><a href="transaction-detail.html"> ModuleReloader</a></td>
                                 <td>1</td>
                                 <td>1</td>
                                 <td>&nbsp;100.0000%</td>
-                                <td><a href="">Log View</a></td>
+                                <td><a href="transaction-logview.html">Log View</a></td>
                                 <td>256.1</td>
                                 <td>256.1</td>
                                 <td>256.1</td>
@@ -375,12 +365,12 @@
                                 </td>
                             </tr>
                             <tr id="fieldInfo" onclick="showInfoTable(this)">
-                               <td class="left"><a>[:: show ::]</a>
+                               <td class="left"><a class="label bg-green">[ show ]</a>
                                 <br /><a href="transaction-detail.html"> MVC</a></td>
                                 <td>510</td>
                                 <td>1</td>
                                 <td>&nbsp;0.1961%</td>
-                                <td><a href="">Log View</a></td>
+                                <td><a href="transaction-logview.html">Log View</a></td>
                                 <td>0</td>
                                 <td>375.8</td>
                                 <td>13.4</td>
@@ -417,12 +407,12 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="left"><a href="" class="graph_link" data-status="6">[:: show ::]</a>
+                                <td class="left"><a class="label bg-green">[ show ]</a>
                                 <br /><a href=""> System</a></td>
                                 <td>60</td>
                                 <td>0</td>
                                 <td>&nbsp;0.0000%</td>
-                                <td><a href="">Log View</a></td>
+                                <td><a href="transaction-logview.html">Log View</a></td>
                                 <td>0</td>
                                 <td>37</td>
                                 <td>6.5</td>
@@ -432,12 +422,12 @@
                                 <td>0.0</td>
                             </tr>
                             <tr>
-                                <td class="left"><a href="" class="graph_link" data-status="0">[:: show ::]</a>
+                                <td class="left"><a class="label bg-green">[ show ]</a>
                                 <br /><a href=""> ModuleReloader</a></td>
                                 <td>1</td>
                                 <td>1</td>
                                 <td>&nbsp;100.0000%</td>
-                                <td><a href="">Log View</a></td>
+                                <td><a href="transaction-logview.html">Log View</a></td>
                                 <td>256.1</td>
                                 <td>256.1</td>
                                 <td>256.1</td>
@@ -447,12 +437,12 @@
                                 <td>0.0</td>
                             </tr>
                             <tr>
-                               <td class="left"><a href="" class="graph_link" data-status="5">[:: show ::]</a>
+                               <td class="left"><a class="label bg-green">[ show ]</a>
                                 <br /><a href=""> MVC</a></td>
                                 <td>510</td>
                                 <td>1</td>
                                 <td>&nbsp;0.1961%</td>
-                                <td><a href="">Log View</a></td>
+                                <td><a href="transaction-logview.html">Log View</a></td>
                                 <td>0</td>
                                 <td>375.8</td>
                                 <td>13.4</td>
@@ -462,7 +452,7 @@
                                 <td>0.1</td>
                             </tr>
                             <tr>
-                                <td class="left"><a href="" class="graph_link" data-status="6">[:: show ::]</a>
+                                <td class="left"><a class="label bg-green">[ show ]</a>
                                 <br /><a href="transaction-detail.html"> System</a></td>
                                 <td>60</td>
                                 <td>0</td>

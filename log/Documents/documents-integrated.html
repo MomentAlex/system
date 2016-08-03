@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>集成文档-文档</title>
+ <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../dist/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.css">
+  <link rel="stylesheet" href="../dist/css/common.css">
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../dist/js/html5shiv.js"></script>
+  <script src="../dist/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini">BL</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">日志系统</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+     <ul class="nav navbar-nav log-menu">
+            <li>
+              <a href="../index.html" target="_self">
+                <button class="btn btn-block btn-success btn-flat" id="nav_application">
+                  <i class="fa fa-signal"></i>应用
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Mobile/mobile.html">
+                <button class="btn btn-block btn-flat btn-twitter" id="nav_mobile">
+                  <i class="menu-icon glyphicon glyphicon-phone"></i>移动
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Browser/browser.html">
+                <button class="btn btn-block btn-flat btn-warning" id="nav_browser">
+                  <i class="fa fa-users"></i>浏览器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Servers/servers.html">
+                <button class="btn btn-block btn-flat bg-purple" id="nav_server">
+                  <i class="fa fa-cogs"></i>服务器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../configs/configs.html">
+                <button class="btn btn-block btn-flat bg-navy" id="nav_config">
+                  <i class="fa fa-fw fa-adjust"></i>配置
+                </button>
+              </a>
+            </li>
+            <li class="active">
+              <a href="documents.html">
+                <button class="btn btn-block btn-flat bg-aqua" id="nav_document">
+                  <i class="fa fa-fw fa-database"></i>文档
+                </button>
+              </a>
+            </li>
+          </ul>
+      <div class="pull-right">
+        <a class="log-exit"><i class="fa fa-sign-out"></i></a>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>亚历山大·皮尔斯</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+        </div>
+      </div>
+      
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">主导航</li>
+         <li class="treeview">
+          <a href="documents.html">
+            <i class="glyphicon glyphicon-home"></i> <span>项目首页</span> 
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="version-description.html">
+            <i class="glyphicon glyphicon-book"></i>
+            <span>版本说明</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="documents-deployment.html">
+            <i class="fa fa-cogs"></i>
+            <span>部署文档</span>
+          </a>
+        </li>
+        <li class="active treeview">
+          <a href="documents-integrated.html">
+            <i class="fa fa-cutlery"></i>
+            <span>集成文档</span>
+          </a>
+        </li>
+         <li class="treeview">
+          <a href="application-monitoring.html">
+            <i class="fa fa-users"></i>
+            <span>应用监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="mobile-monitor.html">
+            <i class="glyphicon glyphicon-phone"></i>
+            <span>移动监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="browser-monitor.html">
+            <i class="fa fa-globe"></i>
+            <span>浏览器监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="server-monitor.html">
+            <i class="fa fa-desktop"></i>
+            <span>服务端监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="alarm-document.html">
+            <i class="fa fa-bell"></i>
+            <span>告警文档</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="interface-document.html">
+            <i class="glyphicon glyphicon-align-left"></i>
+            <span>接口文档</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="developer-document.html">
+            <i class="glyphicon glyphicon-refresh"></i>
+            <span>开发者文档</span>
+          </a>
+        </li>
+         <li class="treeview">
+          <a href="common-problem.html">
+            <i class="fa fa-inbox"></i>
+            <span>常见问题</span>
+          </a>
+        </li>
+         <li class="treeview">
+          <a href="plug-in.html">
+            <i class="fa fa-key"></i>
+            <span>插件扩展</span>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        集成文档
+        <small>Integrated Document</small>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="box box-solid">
+        <div class="box-body">
+          <h4 class="text-success">1.Web.xml中新增filter</h4>
+          <p>注：如果项目是对外不提供URL访问，比如GroupService，仅仅提供Pigeon服务，则不需要。</p>
+          <h5 class="text-danger"><strong>Filter放在url-rewrite-filter 之后的第一个，如果不是会导致URL的个数无限多，比如search/1/2,search/2/3等等，无法监控，后端存储压力也变大。</strong></h5>
+          <pre class="hljs scala">
+&lt;filter&gt;
+    &lt;filter-name&gt;cat-filter&lt;/filter-name&gt;
+    &lt;filter-class&gt;com.dianping.cat.servlet.CatFilter&lt;/filter-class&gt;
+&lt;/filter&gt;
+&lt;filter-mapping&gt;
+    &lt;filter-name&gt;cat-filter&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+    &lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;
+    &lt;dispatcher&gt;FORWARD&lt;/dispatcher&gt;
+&lt;/filter-mapping&gt;
+        </pre>
+        <h5 class="text-danger"><strong>struts会吃掉URL中的ERROR信息，请在配置中加</strong></h5>
+        <pre class="hljs scala">
+&lt;constant name="struts.handle.exception" value="false" /&gt; </pre>
+        <h5 class="text-danger"><strong>解决URL中很多重复的问题，比如restfull的url</strong></h5>
+        <pre class="hljs scala">
+        CAT 提供了自定义的URL的name功能，只要在HttpServletRequest的设置一个Attribute，
+        在业务运行代码中加入如下code可以自定义URL下name，这样可以进行自动聚合。
+        HttpServletRequest req ;
+        req.setAttribute("cat-page-uri", "myPageName");
+        </pre>
+        </div>
+      </div>
+      <div class="box box-solid">
+        <div class="box-body">
+          <h4 class="text-success">2.Pom.xml中更新jar包(点评内部公共组件，外部公司可以忽略)</h4>
+          <pre class="hljs scala">
+&lt;dependency&gt;
+    &lt;groupId&gt;com.dianping.cat&lt;/groupId&gt;
+    &lt;artifactId&gt;cat-core&lt;/artifactId&gt;
+    &lt;version&gt;1.2.7&lt;/version&gt;
+&lt;/dependency&gt;
+
+        </pre>
+        </div>
+      </div>
+      <div class="box box-solid">
+        <div class="box-body">
+          <h4 class="text-success">3、配置domain (cat-core 1.1.3之后版本，优先读取A配置)</h4>
+          <p class="text-danger">A) 在资源文件中新建app.properties文件</p>
+          <p>在resources资源文件META-INF下，注意是src/main/resources/META-INF/文件夹， 而不是webapps下的那个META-INF,添加app.properties，加上domain配置，如：app.name=tuangou-web</p>
+          <p class="text-danger">B) 在资源文件中新建client.xml文件</p>
+          <p>在resources资源文件META-INF下，新建cat文件夹，注意是src/main/resources/META-INF/cat/client.xml文件， 而不是webapps下的那个META-INF,domain id表示项目名称此处为CMDB申请的名字，比如</p>
+          <pre class="hljs scala">
+      &lt;config mode="client"&gt;
+          &lt;domain id="tuangou-web" /&gt;
+      &lt;/config&gt; </pre>
+        </div>
+      </div>
+      <div class="box box-solid">
+        <div class="box-body">
+          <h4 class="text-success">4./data/appdatas/cat/目录下，新建一个client.xml文件(线上环境是OP配置)</h4>
+          <p>如果系统是windows环境，则在eclipse运行的盘，比如D盘，新建/data/appdatas/cat/目录，新建client.xml文件</p>
+          <p>项目文件中srouce中的client.xml,此文件代表了这个项目我是谁,比如项目的名字Cat。</p>
+          <p>/data/appdatas/cat/client.xml,此文件有OP控制,这里的Domain名字用来做开关，如果一台机器上部署了多个应用，可以指定把一个应用的监控关闭。</p>
+          <pre class="hljs scala">
+    &lt;config mode="client"&gt;
+        &lt;servers&gt;
+            &lt;server ip="192.168.213.115" port="2280" /&gt;
+        &lt;/servers&gt;
+    &lt;/config&gt; </pre>
+        <p class="text-danger">alpha、beta这个配置需要自己在此目录添加</p>
+        <p class="text-danger">预发以及生产环境这个配置需要通知到对应OP团队，让他们统一添加，自己上线时候做下检查即可</p>
+        <p>a、192.168.213.115:2280端口是指向测试环境的cat地址</p>
+        <P>b、配置可以加入CAT的开关，用于关闭CAT消息发送,将enabled改为false，如下表示将mobile-api这个项目关闭</P>
+        <pre class="hljs scala">
+&lt;config mode="client"&gt;
+    &lt;servers&gt;
+        &lt;server ip="192.168.213.115" port="2280" /&gt;
+    &lt;/servers&gt;
+    &lt;domain id="mobile-api" enabled="false" /&gt;
+&lt;/config&gt;</pre>
+        </div>
+      </div>
+      <div class="box box-solid">
+        <div class="box-body">
+          <h4 class="text-success">5.CAT的Log4j集成 【建议所有Log都打到CAT，这样才能更快发现问题】</h4>
+          <p class="text-danger">业务程序的所有异常都通过记录到CAT中，方便看到业务程序的问题，建议在Root节点中添加次appendar</p>
+          <h5> a）在Log4j的xml中，加入Cat的Appender></h5>
+          <pre class="hljs scala">
+ &lt;appender name="catAppender" class="com.dianping.cat.log4j.CatAppender"&gt;&lt;/appender&gt;</pre>
+           <h5>b）在Root的节点中加入catAppender</h5>
+           <pre class="hljs scala">
+&lt;root&gt;
+    &lt;level value="error" /&gt;
+    &lt;appender-ref ref="catAppender" /&gt;
+&lt;/root&gt;</pre>
+           <h5 class="text-danger">c）注意有一些Log的是不继承root的，需要如下配置</h5>
+           <pre class="hljs scala">
+&lt;logger name="com.dianping.api.location" additivity="false"&gt;
+    &lt;level value="INFO" /&gt;
+    &lt;appender-ref ref="locationAppender" /&gt;
+    &lt;appender-ref ref="catAppender" /&gt;
+&lt;/logger&gt;</pre>
+        </div>
+      </div>
+    </section>
+  </div>
+ 
+</div>
+<!-- ./wrapper -->
+
+<script src="../plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+
+</body>
+</html>

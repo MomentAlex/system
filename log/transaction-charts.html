@@ -19,7 +19,7 @@
 </head>
 <body>
 	<ul>
-		<li id="container" style="min-width:400px;height:400px"></li>
+		<li id="container1" style="min-width:400px;height:400px"></li>
 		<li id="container2" style="min-width:400px;height:400px"></li>
 		<li id="container3" style="min-width:400px;height:400px"></li>
 		<li id="container4" style="min-width:400px;height:400px"></li>
@@ -48,10 +48,11 @@
 		</tr>
 	</tbody></table>
 	<div id="pie" style="min-width:400px;height:400px"></div>	
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 	<script type="text/javascript">
 		
 $(function () {
-	aa("container","Duration Distribution");
+	aa("container1","Duration Distribution");
 	aa("container2","Hits Over Time");
 	aa("container3","Average Duration Over Time");
 	aa("container4","Failures Over Time");
@@ -171,6 +172,107 @@ $(function () {
 
 
 	</script>
+
+    <script type="text/javascript">
+        var options = {
+            chart: {
+                renderTo: 'container',
+                type: 'column',
+                backgroundColor: {
+                    linearGradient: [0, 0, 500, 500],
+                    stops: [
+                        [0, 'rgb(255, 255, 255)'],
+                        [500, 'rgb(240, 240, 255)']
+                    ]
+                },
+                spacingBottom:30,
+                zoomType:'x'
+            },
+            title: {
+                text: 'sdsd',
+                y:30,
+                style :{
+                    color:'red',
+                    fontSize:'25px'
+                },
+                margin :20
+            },
+            credits:{
+                enabled:false
+            },
+            xAxis: {
+                title :{
+                    text:'sdsd',
+                    align:'middle'
+                },
+                margin: 100,
+            },
+            yAxis: [{
+                title: {
+                    text: 'sdsd'
+                }
+            }],
+            plotOptions: {
+                column:{
+                    dataLabels: {
+                        enabled: true
+                    },
+                    animation:false,
+                    lineWidth:3,
+                    selected:true,
+                    zIndex:10,
+                    showCheckbox:true,
+                                selected:true,
+                                events :{
+                                     checkboxClick: function(event) {
+                                            if(event.checked==true) {
+                                                this.show();
+                                            }
+                                            else {
+                                                this.hide();
+                                            }
+                                             },
+                                             legendItemClick:function(event) {//return false 即可禁用LegendIteml
+                                                     return false;
+                                             }
+                                }
+                }
+            },
+            
+            legend:{
+                floating :true,
+                align: 'left',
+                verticalAlign: 'bottom',
+                x:60,                
+                y:15
+            },
+            series: [{
+                yAxis:0,
+                name:'sd',
+           
+            }]
+        };  
+ 
+        $(document).ready(function(){
+           options.xAxis.categories = [1,2,3,4,5,6];
+           options.series[0].data = [1,2,3,3,2,1];
+           var char = new Highcharts.Chart(options);
+ 
+           $("button").click(function(){
+                options.xAxis.categories = [1,2,3,4,5,6];
+                options.series[0].data = [10,2,5,2,9,1];
+                //options.series[0].pointStart = 2;
+                var series1 = {
+                    yAxis:0,
+                    name:'1111',
+                    data:[2,9,1,10,2,5]
+                };
+                char = new Highcharts.Chart(options);
+                char.addSeries(series1);
+                 
+           });
+        });
+        </script>
 
 </body>
 </html>

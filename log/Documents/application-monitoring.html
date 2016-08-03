@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>应用监控-文档</title>
+ <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../dist/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.css">
+  <link rel="stylesheet" href="../dist/css/common.css">
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="../dist/js/html5shiv.js"></script>
+  <script src="../dist/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini">BL</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">日志系统</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+     <ul class="nav navbar-nav log-menu">
+            <li>
+              <a href="../index.html" target="_self">
+                <button class="btn btn-block btn-success btn-flat" id="nav_application">
+                  <i class="fa fa-signal"></i>应用
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Mobile/mobile.html">
+                <button class="btn btn-block btn-flat btn-twitter" id="nav_mobile">
+                  <i class="menu-icon glyphicon glyphicon-phone"></i>移动
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Browser/browser.html">
+                <button class="btn btn-block btn-flat btn-warning" id="nav_browser">
+                  <i class="fa fa-users"></i>浏览器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../Servers/servers.html">
+                <button class="btn btn-block btn-flat bg-purple" id="nav_server">
+                  <i class="fa fa-cogs"></i>服务器
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="../configs/configs.html">
+                <button class="btn btn-block btn-flat bg-navy" id="nav_config">
+                  <i class="fa fa-fw fa-adjust"></i>配置
+                </button>
+              </a>
+            </li>
+            <li class="active">
+              <a href="documents.html">
+                <button class="btn btn-block btn-flat bg-aqua" id="nav_document">
+                  <i class="fa fa-fw fa-database"></i>文档
+                </button>
+              </a>
+            </li>
+          </ul>
+      <div class="pull-right">
+        <a class="log-exit"><i class="fa fa-sign-out"></i></a>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>亚历山大·皮尔斯</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+        </div>
+      </div>
+      
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">主导航</li>
+         <li class="treeview">
+          <a href="documents.html">
+            <i class="glyphicon glyphicon-home"></i> <span>项目首页</span> 
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="version-description.html">
+            <i class="glyphicon glyphicon-book"></i>
+            <span>版本说明</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="documents-deployment.html">
+            <i class="fa fa-cogs"></i>
+            <span>部署文档</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="documents-integrated.html">
+            <i class="fa fa-cutlery"></i>
+            <span>集成文档</span>
+          </a>
+        </li>
+         <li class="active treeview">
+          <a href="application-monitoring.html">
+            <i class="fa fa-users"></i>
+            <span>应用监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="mobile-monitor.html">
+            <i class="glyphicon glyphicon-phone"></i>
+            <span>移动监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="browser-monitor.html">
+            <i class="fa fa-globe"></i>
+            <span>浏览器监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="server-monitor.html">
+            <i class="fa fa-desktop"></i>
+            <span>服务端监控</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="alarm-document.html">
+            <i class="fa fa-bell"></i>
+            <span>告警文档</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="interface-document.html">
+            <i class="glyphicon glyphicon-align-left"></i>
+            <span>接口文档</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="developer-document.html">
+            <i class="glyphicon glyphicon-refresh"></i>
+            <span>开发者文档</span>
+          </a>
+        </li>
+         <li class="treeview">
+          <a href="common-problem.html">
+            <i class="fa fa-inbox"></i>
+            <span>常见问题</span>
+          </a>
+        </li>
+         <li class="treeview">
+          <a href="plug-in.html">
+            <i class="fa fa-key"></i>
+            <span>插件扩展</span>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        应用监控
+        <small>Application Monitoring</small>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="nav-tabs-custom">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#userDocoument1" data-toggle="tab">Overall</a></li>
+          <li><a href="#userDocoument2" data-toggle="tab">Logview</a></li>
+          <li><a href="#userDocoument3" data-toggle="tab">Report</a></li>
+          <li><a href="#userDocoument4" data-toggle="tab">Transaction</a></li>
+          <li><a href="#userDocoument5" data-toggle="tab">Event</a></li>
+          <li><a href="#userDocoument6" data-toggle="tab">Problem</a></li>
+          <li><a href="#userDocoument7" data-toggle="tab">Heartbeat</a></li>
+          <li><a href="#userDocoument8" data-toggle="tab">Cross</a></li>
+          <li><a href="#userDocoument9" data-toggle="tab">Matrix</a></li>
+          <li><a href="#userDocoument10" data-toggle="tab">Business</a></li>
+          <li><a href="#userDocoument11" data-toggle="tab">Dependency</a></li>
+          <li><a href="#userDocoument12" data-toggle="tab">Storage</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="userDocoument1">
+            <div class="box box-solid document">
+                <h4 class="text-success">实时导航介绍</h4>
+                <img src="../images/overall01.png" style="width:520px;"/>
+                <p>  CAT监控数据实时数据是以小时为单位，如果当前报表是表示5月7号10点- 11点的数据报表，导航链接表示为：</p>
+                <p>1. -1d就是表示5月6号10点-11点的数据（上一天这个小时数据）</p>
+                <p>2. -1h就是表示5月7号9点-10点的数据 （上一个小时数据）</p>
+                <p>3. +1h就是表示5月7号11点-12点的数据 （下一个小时数据）</p>
+                <p>4. +1d就是表示5月8号10点-11点的数据 （下一天这个小时数据）</p>
+                <p class="text-danger">注：如果-1h、-1d超过了当前系统时间，直接跳转到最新的一个小时实时数据。</p>
+
+            </div>
+            <div class="box box-solid document">
+                <h4 class="text-success">历史导航介绍</h4>
+                <p>点击导航中间的<span class="text-danger"><strong>“History Mode”</strong></span>便可进入相应的历史报表界面。</p>
+                <img src="../images/overall02.png" style="width:520px;"/>
+                <p>历史报表目前分为三类：日报表、周报表、月报表。当首次选择day、week、month时，默认为当前最近的一天、一周、一个月。以2012年6月28日14：50为例：</p>
+                <p>①　当选择day时，出现的历史报表则为2012-06-28 00:00:00 to 2012-06-29 00:00:00。可以通过-1d和+1d增加一天或者减少一天。如以前实时报表一样，如果+1d时，超出了当前的最大日期，则默认为当前最近的一天。</p>
+                <p>②　当选择week时，则出现的历史报表为：2012-06-25 00:00:00 to 2012-07-03 00:00:00。（周报表以七天为一周期，默认为上周六到本周星期五）可以通过-1w和+1w增加一天或者减少一周。如以前实时报表一样，如果+1w时，超出了当前的最大日期，则默认为当前最近的一周。</p>
+                <p>③　当选择month时，则历史报表的为：2012-06-01 00:00:00 to 2012-07-01 00:00:00。可以通过-1m和+1m增加一天或者减少一月。如以前实时报表一样，如果+1m时，超出了当前的最大日期，则默认为当前最近的一月。</p>
+            </div>
+          </div>
+          <div class="tab-pane" id="userDocoument2">
+            <div class="box box-solid document">
+              <h4 class="text-success">Logview总体介绍</h4>
+              <img  src="../images/logviewAll01.png"/>
+              <h4 class="text-success">可视化Logview</h4>
+              <img  src="../images/logviewAll02.png"/>
+              <h4 class="text-success">分布式Logview</h4>
+              <img  src="../images/logviewAll03.png"/>
+              <h4 class="text-success">Transaction</h4>
+              <p>a）Tansaction元素包括开始时间、结束时间、类型（type）、名称（name）、状态、处理时间、以及记录的数据（data）。</p>
+              <img  src="../images/logview01.jpg"/>
+              <p>b）Transctio成功状态默认不显示，下图就是失败状态，用红色表示，此状态一般记录为异常。</p>
+              <img  src="../images/logview02.jpg"/>
+              <p>c）Transaction是有执行时间的，它里面可以嵌套其他的Transaction，Event。</p>
+              <img  src="../images/logview03.jpg"/>
+              <h4 class="text-success">Event</h4>
+              <p>Event元素包括开始时间、类型（type）、名称（name）、状态以及数据（data）。</p>
+              <img  src="../images/logview04.jpg"/>
+              <h4 class="text-success">Heartbeat</h4>
+              <p>Heartbeat元素包括开始时间、类型（type）、名称（name）、状态以及数据（data）。</p>
+              <img  src="../images/logview05.jpg"/>
+            </div>
+          </div>
+          <div class="tab-pane" id="userDocoument3">
+            <dl class="document">
+                <dt><h4 class="text-success">Transaction实时报表</h4></dt>
+                <dd>一段代码运行时间、次数，比如URL、Cache、SQL执行次数和响应时间 </dd>
+                <dt><h4 class="text-success">Event实时报表</h4></dt>
+                <dd>一行代码运行次数，比如出现一个异常</dd>
+                <dt><h4 class="text-success">Problem实时报表</h4></dt>
+                <dd>根据Transaction\Event数据分析出来系统可能出现的异常，包括访问较慢的程序等 </dd>
+                <dt><h4 class="text-success">Heartbeat实时报表</h4></dt>
+                <dd>JVM内部一些状态信息，Memory，Thread等 </dd>
+                <dt><h4 class="text-success">Dependency实时报表</h4></dt>
+                <dd>系统之间实时调用数据信息，包括远程服务、数据库、缓存等 </dd>
+                <dt><h4 class="text-success">Metric实时报表</h4></dt>
+                <dd>业务监控报表</dd>
+                <dt><h4 class="text-success">Matrix实时报表</h4></dt>
+                <dd>一个请求调用链路统计（一次请求中调用多少次SQL、PRC、Cache等） </dd>
+                <dt><h4 class="text-success">Cross实时报表</h4></dt>
+                <dd>SOA系统用关于RPC调用的报表(支持粒度服务、IP、方法) </dd>
+                <dt><h4 class="text-success">State实时报表</h4></dt>
+                <dd>CAT自身状态监控，包括处理消息数、丢失消息 </dd>
+                <dt><h4 class="text-success">Storage实时报表</h4></dt>
+                <dd>数据库以及CACHE状态监控，包括访问量，访问延时，错误量，长时间访问量等 </dd>
+              </dl>
+          </div>
+          <div class="tab-pane" id="userDocoument4">
+            <div class="box box-solid document">
+              <h4 class="text-success">Storage实时报表</h4>
+              <h5>功能：监控一段代码运行情况：运行时间统计、次数、错误次数等等。系统默认的有URL、Cache、SQL、PigeonCall、PigeonService</h5>
+              <p class="text-danger">由于计算95line需要数据较多，为了减少内存开销，系统做了一些优化，在单个小时内某一台机器，95Line误差是1ms，但是合并成1一天，1周，1个月误差较大（数据仅供参考）</p>
+              <h5 class="text-sucess">a）Type统计界面</h5>
+              <img  src="../images/transaction01.jpg"/>
+              <h5 class="text-sucess">b）Name统计界面</h5>
+              <img  src="../images/transaction02.jpg"/>
+              <h5 class="text-sucess">c）一个小时内详细指标统计</h5>
+              <p>1. Duration Distribution表示transaction的执行时间分布，这个图可以看出，大部分shopcheckin是在16-64毫秒完成，还有很少部分在512-1024毫秒完成。</p>
+              <p>2. HitOverTime、Averager Duration Over Time,Failures Over Time 纵轴都是以5分钟为单位，HitOverTime表示5分钟内的访问次数。</p>
+              <p>3. Averager Duration Over Time表示5分钟内的平均处理时间。</p>
+              <p>4. Failures Over Time表示5分钟内的Transaction失败次数。</p>
+              <img  src="../images/transaction03.png" width="770px"/>
+            </div>
+            <div class="box box-solid document">
+              <h4 class="text-success">Transaction历史统计报表</h4>
+              <p class="text-danger">a）Transaction\Event月报表支持每天的趋势图，以天为单位,如下图</p>
+              <img  src="../images/transaction06.png" width="770px"/>
+              <p class="text-danger">b）Transaction\Event报表日报表、周报表支持同比、环比对比,时间精度为5分钟</p>
+              <img  src="../images/transaction05.png" width="770px"/>
+            </div>
+          </div>
+          <div class="tab-pane document" id="userDocoument5">
+          <h4 class="text-success">Event实时报表</h4>
+          <h5>功能：记录程序中一个事件记录了多少次，错误了多少次。相比于Transaction，Event没有运行时间统计。</h5>
+          <h5 class="text-sucess">a）Type统计界面</h5>
+          <img src="../images/event01.png" width="770px"/>
+          <h5 class="text-sucess">b）Name统计界面</h5>
+          <img src="../images/event02.png" width="770px"/>
+          <h5 class="text-sucess">c）一个小时内详细指标统计</h5>
+          <p>1. HitOverTime、Averager Duration Over Time,Failures Over Time 纵轴都是以5分钟为单位，HitOverTime表示5分钟内的访问次数。</p>
+          <p>2. Failures Over Time表示5分钟内的Transaction失败次数。</p>
+          <br/>
+          <img src="../images/event05.png" width="100%"/>
+          <h4 class="text-success">Event历史报表</h4>
+          <p class="text-danger">a）Transaction\Event月报表支持每天的趋势图，以天为单位,如下图</p>
+          <img src="../images/event04.png" width="100%"/>
+          <p class="text-danger">b）Transaction\Event报表日报表、周报表支持同比、环比对比,时间精度为5分钟</p>
+          <img src="../images/event03.png" width="100%"/>
+          </div>
+              <div class="tab-pane document" id="userDocoument6">
+          <h4 class="text-success">Problem功能介绍</h4>
+          <h5> Problem记录整个项目在运行过程中出现的问题，包括一些错误、访问较长的行为。Problem的类型如下：</h5>
+          <table class="table table-bordered table-striped table-condensed   table-hover">
+            <tr><td>error</td><td>Log4j记录的错误异常</td></tr>
+            <tr><td>call</td><td>表示在远程调用中transaction中出错</td></tr>
+            <tr><td>sql</td><td>表示在数据库的调用中transaction中出错</td></tr>
+            <tr><td>url</td><td>表示在url请求中调用transaction中出错</td></tr>
+            <tr><td>failure</td><td>业务程序Transaction的失败(除了call\sql\url之外)</td></tr>
+            <tr><td>heartbeat</td><td>心跳消息</td></tr>
+            <tr><td>long-url</td><td>执行慢的url请求（可以进行进行时间筛选）</td></tr>
+            <tr><td>long-service</td><td>执行慢的service请求（可以进行进行时间筛选）</td></tr>
+            <tr><td>long-sql</td><td>执行慢的sql请求（可以进行进行时间筛选）</td></tr>
+          </table>
+          <h4 class="text-success">Problem实时报表</h4>
+          <h5>All的错误界面</h5>
+          <img src="../images/problem01.jpg"/>
+          <h5>错误一个小时内的实时趋势图</h5>
+          <img src="../images/problem03.png" width="550px"/>
+          <h5>点击机器IP，进入某一台机器出现的具体问题，这个包括了All中出现的所有错误统计之外，还增加了以分钟和线程为单位的错误分布图，具体如下：</h5>
+          <img src="../images/problem02.jpg"/>
+          <h4 class="text-success">Problem历史报表</h4>
+          <h5>1）在选择了特定的域、报表类型、时间和IP之后，点击[:: show ::] 查看某一Type下的Problem出现次数的分布图。(当前这一天、上一天、上周这一天)</h5>
+          <img src="../images/problem04.png"  width="370px"/>
+          <h5>2）进一步，可以查看该Type下，某个Status的Problem出现次数的分布图。(当前这一天、上一天、上周这一天)</h5>
+          <img src="../images/problem05.png"   width="100%"/>
+          </div>
+              <div class="tab-pane document" id="userDocoument7">
+          <h4 class="text-success">Heartbeat实时报表</h4>
+          <h5>Heartbeart是CAT客户端一分钟一次向服务器发送自身的状态信息。Machine是当前项目下所有的部署机器。Heartbeat包括：</h5>
+          <h5 class="text-info">Thread信息包括</h5>
+          <table style="width:50%" class="table table-bordered table-striped table-condensed   table-hover">
+            <tr><td>Active Thread</td><td> 系统当前活动线程</td></tr>
+            <tr><td>Daemon Thread</td><td>系统后台线程</td></tr>
+            <tr><td>Total Started Thread</td><td> 系统总共开启线程</td></tr>
+            <tr><td>Started Thread</td><td>系统每分钟新启动的线程</td></tr>
+            <tr><td>Cat Started Thread </td><td>系统中CAT客户端启动线程</td></tr>
+            <tr><td>Pigeon Started Thread</td><td> 系统中Pigeon客户端启动线程数</td></tr>
+          </table>
+          <h5 class="text-info">System Info信息包括</h5>
+          <table style="width:50%" class="table table-bordered table-striped table-condensed   table-hover">
+            <tr><td>NewGc Count</td><td>新生代GC次数</td></tr>
+            <tr><td>OldGc Count</td><td>旧生代GC次数</td></tr>
+            <tr><td>System Load Average</td><td>系统Load详细信息</td></tr>
+          </table>
+          <h5 class="text-info">Memery Info信息包括</h5>
+          <table style="width:50%" class="table table-bordered table-striped table-condensed   table-hover">
+            <tr><td>Memory Free</td><td>系统memoryFree情况</td></tr>
+            <tr><td>Heap Usage</td><td>Java虚拟机堆的使用情况</td></tr>
+            <tr><td>None Heap Usage</td><td>Java虚拟机Perm的使用情况</td></tr>
+          </table>
+          <h5 class="text-info">Disk Info信息包括</h5>
+          <table style="width:50%" class="table table-bordered table-striped table-condensed   table-hover">
+            <tr><td>/根的使用情况</td></tr>
+            <tr><td>/data盘的使用情况</td></tr>
+          </table>
+          <h5 class="text-info">Cat Info信息包括</h5>
+          <table style="width:50%" class="table table-bordered table-striped table-condensed   table-hover">
+            <tr><td>Cat每分钟产生消息数</td></tr>
+            <tr><td>Cat每分钟丢掉的消息数</td></tr>
+            <tr><td>Cat每分钟产生消息大小</td></tr>
+          </table>
+          <img src="../images/heartbeat01.png"  width="100%"/>
+          </div>
+              <div class="tab-pane document" id="userDocoument8">
+          <h4 class="text-success">Cross实时报表</h4>
+          <h5>统计粒度支持项目、具体某一IP、具体的服务方法</h5>
+          <h5>统计参数包括：访问量，错误量，响应时间，QPS</h5>
+          <h4 class="text-success">客户端调用</h4>
+          <img src="../images/cross01.png" width="600px"/>
+          <br/>
+          <h4 class="text-success">服务端调用</h4>
+          <img src="../images/cross02.png" width="100%"/>
+          </div>
+              <div class="tab-pane document" id="userDocoument9">
+          <h4 class="text-success">Matrix实时报表</h4>
+          <h5>一次请求（URL、Service）中的调用链路统计，包括远程调用、sql调用、缓存调用</h5>
+          <h5 class='text-danger'>Ratio表示访问次数，Min是最少，Max是最大，Avg是平均</h5>
+          <h5 class='text-danger'>Cost表示时间消耗，Min是最少，Max是最大，Avg是平均</h5>
+          <img src="../images/matrix01.png" width="100%"/>
+          <br/>
+          <br/>
+          <h4 class="text-success">调用链路排行</h4>
+          <h5>包括远程调用、sql调用、缓存调用最多排行</h5>
+          <img src="../images/matrix02.png" width="100%"/>
+          </div>
+              <div class="tab-pane document" id="userDocoument10">
+          <h4 class="text-success">Business实时报表 <a href="../r/business?domain=cat">访问链接</a></h4> 
+          <h5>公司核心业务指标监控</h5>
+          <img src="../images/metric02.png" width="100%"/>
+          <h5>输入时间，查询条件，即可查看业务指标报表。查询条件可以是domain，也可以是标签名称，其中标签均以TAG_开头。</h5>
+          <h5 class='text-danger'>“当前值”表示当前实际值，“基线值”表示根据历史趋势算出来当天的基准线</h5>
+          <br/><br/>
+          <h4 class="text-success">自定义metric配置 <a href="../s/business?op=list">配置链接</a></h4>
+          <h5>支持自定义metric，自定义metric指对多个打点得到的指标进行四则运算，得到一个新的metric。</h5>
+
+          <h5 class="text-success">配置方法：</h5>
+          <h5>输入domain，查询 -> 点击新增，进入配置页面 -> 填写自定义metric的信息，在规则配置栏中填写四则运算规则 -> 配置完成后，即可在对应domain的报表中看到该metric的报表。</h5>
+          <img src="../images/metric03.png" width="100%"/>
+          <h4 class="text-success">一个例子：<br/></h4>
+          <h5 class="text-success">应用打点：</h5>
+          <h5>
+            在应用shopweb的某段代码中，加入如下打点：<br/><br/>
+            Cat.logMetricForCount("success");<br/>
+            Cat.logMetricForCount("total", 3);<br/>
+          </h5>
+          <h5 class="text-success">自定义配置：</h5>
+          <h5>${shopweb,success,COUNT} / ${shopweb,total,COUNT} </h5>
+          <h5>表示shopweb下名为success,类型为COUNT的值除以shopweb下名为total，类型为COUNT的值，用于表示成功率。</h5>
+          <h5 class='text-danger'>最终shopweb这个domain下，business报表会有三张图，表示的指标分别为success，total，以及计算出的成功率。</h5>
+          <br/><br/>
+          <h4 class="text-success">标签配置：<a href="../s/business?op=tagConfig">配置链接</a><br/></h4>
+          <h5>每个tag节点表示一个标签，tag下可以有多个business-item,每个business-item表示一个metric项，其中domain为应用名，item-id为指标名称。</h5><br/>
+          <img src="../images/metric04.png" width="100%"/>
+            
+          </div>
+              <div class="tab-pane document" id="userDocoument11">
+          <h4 class="text-success">Dependency实时报表</h4>
+          <table style="width:50%" class="table table-striped table-bordered table-condensed   table-hover">
+            <tr><td>时间统计粒度</td><td class='text-danger'>分钟</td></tr>
+            <tr><td>形状：圆形</td><td class='text-danger'>SOA的一个服务或者一个Web</td ></tr>
+            <tr><td>形状：矩形</td><td class='text-danger'>数据库一个实例</td></tr>
+            <tr><td>形状：菱形</td><td class='text-danger'>缓存一种集群（MemoryCached）</td></tr>
+            <tr><td>状态：红色</td><td class='text-danger'>Error</td></tr>
+            <tr><td>状态：黄色</td><td class='text-danger'>Warning</td></tr>
+            <tr><td>状态：绿色</td><td class='text-danger'>OK</td></tr>
+            <tr><td>浮层</td><td>点击节点可以直接查询这一分钟内这个节点的详细状态</td></tr>
+          </table>
+          <img src="../images/dependency01.png" width="700" />
+          <h4 class="text-success">应用监控大盘</h4>
+          <h5>把所有核心项目用监控大盘方式展示，能全局看到项目目前问题。</h5>
+          <img src="../images/dependency02.png" width="100%"/>
+          <img src="../images/dependency03.png" width="100%"/>
+          </div>
+              <div class="tab-pane document" id="userDocoument12">
+          <h4 class="text-success">Storage实时报表</h4>
+          <h5>功能：监控一段时间内数据库、Cache访问情况：各种操作访问次数、响应时间、错误次数、长时间访问量等等。</h5>
+          <p class="text-danger">长时间访问定义：操作响应时间超过1秒（数据库），操作响应时间超过50毫秒（cache）</p>
+          <h4 class="text-sucess">a）统计报表</h4>
+          <h5>&nbsp;&nbsp;&nbsp;&nbsp;(1) 可以选择相应操作，查看该操作的各项访问指标。数据库默认操作：<span class="text-danger">select,update,delete,insert；</span>cache默认操作：<span class="text-danger">add,get,mGet,remove</span></h5>
+          <h5>&nbsp;&nbsp;&nbsp;&nbsp;(2) Domain是访问该数据库或cache的应用名，All是所有应用操作数据汇总</h5>
+          <h5>&nbsp;&nbsp;&nbsp;&nbsp;(3) Count: 操作数；Long：长时间操作数；Avg：响应时间；Error：操作错误数</h5>
+          <h5>&nbsp;&nbsp;&nbsp;&nbsp;(4) 点击查询可以在当前报表上过滤不同操作访问情况，方便分析数据</h5>
+          <img src="../images/storageDatabaseReport.png" width="90%"/>
+          <h5 class="text-sucess">b）统计曲线图</h5>
+          <h5>&nbsp;&nbsp;&nbsp;&nbsp;(1) 图表展示当前应用操作数据库或cache情况</h5>
+          <h5>&nbsp;&nbsp;&nbsp;&nbsp;(2) 图表展示的操作种类，与查询报表中的操作对应一致</h5>
+          <img src="../images/storageDatabaseLinechart.png" width="90%"/>
+            </div>
+        </div>
+      </div>
+    </section>
+  </div>
+ 
+</div>
+<!-- ./wrapper -->
+
+<script src="../plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+
+</body>
+</html>

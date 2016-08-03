@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>跨域--应用</title>
   <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
@@ -14,20 +14,15 @@
   <link rel="stylesheet" href="dist/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.css">
-     <link rel="stylesheet" href="dist/css/common.css">
+
+  <link rel="stylesheet" href="dist/css/common.css">
+
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-      <!-- Select2 -->
-  <link rel="stylesheet" href="plugins/select2/select2.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+  <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
   <!-- Morris chart -->
   <link rel="stylesheet" href="plugins/morris/morris.css">
   <!-- jvectormap -->
   <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
-  <!-- Date Picker -->
-  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
@@ -118,17 +113,7 @@
           <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
         </div>
       </div>
-      <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
-      <!-- /.search form -->
+      
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">主导航</li>
@@ -137,18 +122,18 @@
             <i class="fa fa-dashboard"></i> <span>仪表大盘</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="search.html"><i class="fa fa-circle-o"></i> 报错大盘</a></li>
-            <li><a href="search.html"><i class="fa fa-circle-o"></i> 业务大盘</a></li>
+            <li><a href="index.html"><i class="fa fa-circle-o"></i> 报错大盘</a></li>
+            <li><a href="market-business.html"><i class="fa fa-circle-o"></i> 业务大盘</a></li>
             <li><a href="search.html"><i class="fa fa-circle-o"></i> 网络大盘</a></li>
             <li><a href="search.html"><i class="fa fa-circle-o"></i> 服务大盘</a></li>
-            <li><a href="search.html"><i class="fa fa-circle-o"></i> 数据库大盘</a></li>
-            <li><a href="search.html"><i class="fa fa-circle-o"></i> 缓存大盘</a></li>
+            <li><a href="market-database.html"><i class="fa fa-circle-o"></i> 数据库大盘</a></li>
+            <li><a href="market-cache.html"><i class="fa fa-circle-o"></i> 缓存大盘</a></li>
           </ul>
         </li>
         <li>
           <a href="transaction.html">
             <i class="fa fa-th"></i> <span>业务</span>
-            <small class="label pull-right bg-green">新</small>
+            
           </a>
         </li>
         <li class="treeview">
@@ -320,8 +305,26 @@
                         <button type="button" class="btn btn-danger btn-trans">全部</button>
                         <button type="button" class="btn btn-default btn-trans">172.16.14.192</button>
                      </div>
-                     
-                    
+                     <div class="log">
+                        <table id="example1" class="table table-bordered table-striped">
+                          <thead>
+                          <tr>
+                              <th>类型</th>
+                              <th>项目</th>
+                              <th>IP</th>
+                              <th>方法名</th>
+                              <th class="right">Total</th>
+                              <th class="right">Failure</th>
+                              <th class="right">Failure%</th>
+                              <th class="right">Avg(ms)</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          
+                          
+                          </tbody>
+                        </table>
+                     </div>
 
                 </div>
 
@@ -343,11 +346,29 @@
 <script src="dist/js/highcharts.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="plugins/select2/select2.full.min.js"></script>
+<!-- DataTables -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $('#example1').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
 
 
 
